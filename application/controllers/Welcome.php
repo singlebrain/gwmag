@@ -21,6 +21,6 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//redirect(base_url().'index.php/login_cont/loginview');
-		$this->load->view('baic_form');
+		$this->load->view('basic_form');
 	}
 }
