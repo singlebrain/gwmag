@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -49,17 +51,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <header class="w3-container w3-top w3-white" id="portfolio" style="opacity: .9;">
   <!-- opacity -->
     <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
-    <div class="w3-cell-row w3-container w3-padding-10">
-      <span class="w3-cell w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
+    <div class="w3-cell-row w3-container w3-padding-10 w3-row" style="width:20%">
+      <span class="w3-col w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
     <!-- <div class="w3-container">
     <h1><b>My Portfolio</b></h1> -->
     <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class=" w3-cell w3-button w3-cell"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-cell"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
-      <button class=" w3-cell w3-button w3-cell"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button class=" w3-cell w3-button w3-cell"><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
-    </div>
+     
+      <div class="w3-col" style="width:20%">
+        <button class=" w3-button "><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
+      </div>
+      <div class="w3-col" style="width:20%">
+        <button class=" w3-button" ><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      </div>
+      <div class="w3-col" style="width:20%">
+        <button class=" w3-button "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      </div>
+      <div class="w3-col" style="width:20%">
+        <button class="w3-button"  ><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      </div>
+   
     <!-- </div> -->
   </header>
   
