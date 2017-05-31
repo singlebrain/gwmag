@@ -74,7 +74,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- insert here -->
 
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:800px;" >
+<div class="w3-content w3-display-container" style="max-width:100%;" >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
   <img class="mySlides w3-image" src="<?php echo base_url('images/slides/01.jpg') ?>" style="width:100%">
   <img class="mySlides w3-image" src="<?php echo base_url('images/slides/02.jpg') ?>" style="width:100%">
