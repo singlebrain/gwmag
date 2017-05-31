@@ -28,7 +28,11 @@ class Welcome extends CI_Controller {
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('basic_form');
 	}
+<<<<<<< HEAD
 public function loadhome()
+=======
+		public function loadhome()
+>>>>>>> 2ab30fe3986474b53c3c431ff174d2f66889d388
 	{
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('home');

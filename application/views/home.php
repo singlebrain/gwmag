@@ -74,11 +74,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- insert here -->
 
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:800px;" >
+<div class="w3-content w3-display-container" style="max-width:100%;" >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
-  <img class="mySlides w3-image" src="slides/01.jpg" style="width:100%">
-  <img class="mySlides w3-image" src="slides/02.jpg" style="width:100%">
-  <img class="mySlides w3-image" src="slides/03.jpg" style="width:100%">
+  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/01.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/02.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/03.jpg') ?>" style="width:100%">
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
