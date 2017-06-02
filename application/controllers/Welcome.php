@@ -33,4 +33,9 @@ public function loadhome()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('home');
 	}
+public function loadabout()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('about');
+	}	
 }

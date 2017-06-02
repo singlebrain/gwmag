@@ -13,9 +13,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
+body {font-family: "Verdana":sans-serif;background-image: url("<?php echo base_url('images/3.jpg') ?>");}
+h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
-<body class="w3-light-grey w3-content" style="background-color: #f2f2f2; max-width:1600px;">
+<body>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
@@ -153,8 +154,8 @@ function w3_close() {
   </footer>
 
 <!-- Contact Section -->
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;">
-    <h4 id="contact"><b>Let's Get In Touch!</b></h4>
+  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.7">
+    <h4 class="w3-light-grey" id="contact"><b> Let's Get In Touch!</b></h4>
     <hr class="w3-opacity">
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -200,14 +201,14 @@ function w3_close() {
       <header class="w3-container w3-blue"> 
         <span onclick="document.getElementById('id01').style.display='none'" 
         class="w3-button w3-display-topright">&times;</span>
-        <h2>Login</h2>
+        <h2 style=>Login</h2>
       </header>
       <div class="w3-container">
       <!-- create form here -->
         <form action="" autocomplete="on" method="post">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sigin In" name="signin"/>
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" name="Sign In"/>
         <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up" formmethod="get" formaction="">
           
         </form>
