@@ -13,15 +13,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
 <style>
 .mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-body {font-family: "Verdana":sans-serif;background-image: url("<?php echo base_url('images/3.jpg') ?>");}
+
+body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;opacity: 0.7" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
@@ -72,11 +71,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <!-- </div> -->
   </header>
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%; padding-top: 10%;" >
+<div class="w3-content w3-display-container" style="max-width:100%; " >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/01.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/02.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/03.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/1.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/2.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/3.jpg') ?>" style="width:100%">
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
