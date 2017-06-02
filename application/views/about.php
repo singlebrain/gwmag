@@ -13,10 +13,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
 <style>
 .mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-/*body {font-family: "Verdana":sans-serif;background-image: url("<?php echo base_url('images/3.jpg') ?>");}*/
-body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
+w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding: ;}
+body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
 <body>
 
@@ -72,16 +72,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <!-- </div> -->
   </header>
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%; padding-top: 10%;" >
+<div class="w3-content w3-display-container" style="max-width:100%; " >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
   <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/about.jpg') ?>" style="width:100%">
-
+  
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
   </div>
 </div> 
 <script>
@@ -116,17 +116,17 @@ function currentDiv(n) {
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  // var dots = document.getElementsByClassName("demo");
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-orange", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-orange";
+  // for (i = 0; i < dots.length; i++) {
+  //    dots[i].className = dots[i].className.replace(" w3-orange", "");
+  // }
+   x[slideIndex-1].style.display = "block";  
+  // dots[slideIndex-1].className += " w3-orange";
 }
 </script>
 <!-- insert here -->
@@ -147,58 +147,17 @@ function w3_close() {
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
-    <div class="w3-third">
+    <div class="w3-third w3-center">
       <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
-    <div class="w3-twothird">
-      <p class="w3-text-white">dummy text this is used to enter describtion about life values foundation</p>
+<br>
+    <div class="w3-twothird w3-light-grey" style="opacity: 0.9">
+      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation    </p><br><br>
     </div>    
   </div>
   </footer>
 
-<!-- Contact Section -->
 
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.7">
-    <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
-
-
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Feedback</label>
-        <input class="w3-input w3-border" type="text" name="Feedback" required>
-      </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Feedback</button>
-    </form>
-    <h4 id="contact"><b>Contact Us </b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-yellow">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
-        <p><br>contact@giantwheelmag.com<br><br></p>
-      </div>
-      <div class="w3-third w3-lime">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
-        <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
-      </div>
-      <div class="w3-third w3-khaki">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-black"></i></p>
-        <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-  
-  <!-- <div class="w3-black w3-center w3-padding-24"></div> -->
 
 <!-- login popup -->
 <center>
@@ -211,12 +170,12 @@ function w3_close() {
       </header>
       <div class="w3-container">
       <!-- create form here -->
-        <form action="" autocomplete="on" method="post">
+        <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" name="Sign In"/>
-        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up" formmethod="get" formaction="">
-          
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
+        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
+         
         </form>
       </div>
     </div>

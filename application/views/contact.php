@@ -74,9 +74,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/1.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/2.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/3.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/contact.jpg') ?>" style="width:100%">
+  
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
@@ -158,49 +157,7 @@ function w3_close() {
   </div>
   </footer>
 
-<!-- Contact Section -->
 
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.9">
-    <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
-
-
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Feedback</label>
-        <input class="w3-input w3-border" type="text" name="Feedback" required>
-      </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Feedback</button>
-    </form>
-    <h4 id="contact"><b>Contact Us </b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px ;opacity: 2">
-      <div class="w3-third w3-yellow">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
-        <p><br>contact@giantwheelmag.com<br><br></p>
-      </div>
-      <div class="w3-third w3-lime">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
-        <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
-      </div>
-      <div class="w3-third w3-khaki">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-black"></i></p>
-        <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-  
-  <!-- <div class="w3-black w3-center w3-padding-24"></div> -->
 
 <!-- login popup -->
 <center>
