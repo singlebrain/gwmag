@@ -88,18 +88,83 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-</script>
+function toggle(q){
 
+   document.getElementById(q).style.display = "block";
+   // hide()
+}
+// function hide(){
+//   document.getElementById('a').style.display = 'none';
+//   document.getElementById('b').style.display = 'none';
+//   document.getElementById('c').style.display = 'none';
+//   document.getElementById('d').style.display = 'none';
+//   document.getElementById('e').style.display = 'none';
+//   document.getElementById('f').style.display = 'none';
+//   document.getElementById('g').style.display = 'none';
+//   document.getElementById('h').style.display = 'none';
+//   document.getElementById('i').style.display = 'none';
+//   document.getElementById('j').style.display = 'none';
+//   document.getElementById('k').style.display = 'none';
+  
+}
+</script>
+  <div class="w3-container w3-content w3-yellow w3-text-blue" style="padding-top:70px;">
+    <ul class="w3-ul" style="list-style-type:disc; padding-left:30px;">
+    <!-- qn1 -->
+    <li><a href="javascript:void(null)" onclick="toggle('a')">What is this website all about?</a>
+    <p id='a' style="display:none;">This is the official website of GIANT WHEEL, India’s first life values and life skills comic monthly.
+</p></li>
+    <!-- qn2 -->
+    <li><a href="javascript:void(null)" onclick="toggle('b')">What kind of magazine is GIANT WHEEL?</a>
+    <p id='b' style="display:none;">GIANT WHEEL addresses three key needs that are felt today by parents and educators alike.
+The first need is to provide valuable and insightful inputs on the life values front. Life values are deteriorating in today’s fast paced world and children are being inundated by confusing and conflicting messages from media, peers and family. As family structures break apart and quality time decreases, parents are finding it very difficult to provide the right inputs. The GIANT WHEEL magazine aims to fill that gap in an engaging, interesting and non-preachy manner. 
+ 
+The second need is the much required Life Skills. Reading, writing, memorizing, speaking, presenting, etc. are things that children are normally required to do. But there are more skilful and effective ways of doing all these and more. The GIANT WHEEL magazine will impart valuable soft skills in very issue.
+ 
+The third need is to spend quality time with children. The GIANT WHEEL magazine is an excellent tool to spend quality time with your child.</p></li>
+    <!-- qn3 -->
+    <li><a href="javascript:void(null)" onclick="toggle('c')">What more does this magazine have?</a>
+    <p id='c' style="display:none;">There are sections featuring debates, insights, biographies, history, science, career guidance, quotes, facts, jokes and lots more.</p></li>
+    <!-- qn4 -->
+    <li><a href="javascript:void(null)" onclick="toggle('d')">Who is this magazine for?</a>
+    <p id='d' style="display:none;">For all children who have started reading for themselves.</p></li>
+    <!-- qn5 -->
+    <li><a href="javascript:void(null)" onclick="toggle('e')">My child is too young to read for himself/herself. Can I not read it to him/her?</a>
+    <p id='e' style="display:none;">You most certainly can.</p></li>
+    <!-- qn6 -->
+    <li><a href="javascript:void(null)" onclick="toggle('f')">How do I get this magazine?</a>
+    <p id='f' style="display:none;">To get this magazine, all you have to do is to click on the SUBSCRIBE button and subscribe to the magazine.</p></li>
+    <!-- qn7 -->
+    <li><a href="javascript:void(null)" onclick="toggle('g')">I filled in the subscription form but when I clicked the REGISTER AND PAY button, the screen went blank / the PayUmoney website did not work / my internet connection failed / my system re-started. What do I do?</a>
+    <p id='g'style="display:none;">Your registration process has been interrupted. This is what you would need to do. 
+1. Press the LOGIN button which you can find on top of every page.
+2. Using your Login Id and Password, Log in to your account. 
+3. Then press the MAKE PAYMENT button in the login page to make the payment.Once the payment is made, your registration process will be completed and you will get a receipt.</p></li>
+    <!-- qn8 -->
+    <li><a href="javascript:void(null)" onclick="toggle('h')">My registration process has been interrupted and I tried to login as mention in the above question, but I was not able to login. What do I do now?</a>
+    <p id='h' style="display:none;">You are not able to login, because your details have not been registered successfully with us. What you could do is: Press the SUBSCRIBE button, go through the subscription process all over again and complete the process successfully.</p></li>
+    <!-- qn9 -->
+    <li><a href="javascript:void(null)" onclick="toggle('i')">I am unable to make the payment through the PayUmoney website. What do I do?</a>
+    <p id='i' style="display:none;">You can drop us an e-mail to contact@giantwheelmag.com mentioning your user id and we will send you our bank details. You can then do an online fund transfer to us. Once that is done please send us an email with your transaction id. We wil then activate your acount.</p></li>
+    <!-- qn10 -->
+    <li><a href="javascript:void(null)" onclick="toggle('j')">I made the payment successfully, but I did not get a receipt. What now?</a>
+    <p id='j' style="display:none;">Nothing to worry about. Just get in touch with us through email or phone and we will sort the issue out.</p></li>
+    <!-- qn11 -->
+    <li><a href="javascript:void(null)" onclick="toggle('k')">I have successfully subscribed. When will I get my first issue?</a>
+    <p id='k' style="display:none;">When you subscribe to our magazine in a particular month, your first issue will be dispatched on the first week of the next month. 
+
+Eg. 1. 
+If you subscribe in the month of June, your first copy will be sent to you on the first week of July.
+
+However we are aligned to the school academic year and so we do not publish issues in the month of April and May.
+
+Eg. 2.
+If you subscribe in the month of March your first issue will be sent to you on the first week of June.</p></li>
+    <ol>
+  </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
-    <div class="w3-third w3-center">
-      <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
-        </div>
-<br>
-    <div class="w3-twothird w3-light-grey" style="opacity: 0.9">
-      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation    </p><br><br>
-    </div>    
   </div>
   </footer>
 
