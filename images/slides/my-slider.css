@@ -286,13 +286,13 @@ p.ism-badge a.ism-link:hover {
 /* SLIDER */
 
 #my-slider {
-    width: 1080px;
+    width: 100%;
     height: 501px;
     -webkit-border-radius: 5px; border-radius: 5px; 
 }
 
 #my-slider-ism-badge {
-    width: 1080px;
+    width: 100%;
 }
 
 #my-slider .ism-button {
