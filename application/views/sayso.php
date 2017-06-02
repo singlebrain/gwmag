@@ -95,7 +95,10 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
+<!-- say so -->
+<div class="w3-content w3-display-container" style="max-width:100%; " >
+  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/contact.jpg') ?>" style="width:100%">
+  </div>
   <!-- Footer -->
 <!--   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">

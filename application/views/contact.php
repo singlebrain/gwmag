@@ -31,11 +31,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
      --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
   <div class="w3-bar-block">
-    <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding  w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
-    <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
+    <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="loadsayso" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
     <a href="loadfaq" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
-    <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
   <div class="w3-panel w3-large">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -73,9 +73,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
   </header>
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
- 
-  </div>
 </div> 
+
+<!-- insert here -->
+
 <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -88,7 +89,10 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
+<!-- contact -->
+<div class="w3-content w3-display-container" style="max-width:100%; " >
+  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/contact.jpg') ?>" style="width:100%">
+  </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
