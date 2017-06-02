@@ -89,22 +89,23 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 function toggle(q){
-
+  hide();
    document.getElementById(q).style.display = "block";
-   // hide()
+   document.getElementById(q).style.color = "black";
+
 }
-// function hide(){
-//   document.getElementById('a').style.display = 'none';
-//   document.getElementById('b').style.display = 'none';
-//   document.getElementById('c').style.display = 'none';
-//   document.getElementById('d').style.display = 'none';
-//   document.getElementById('e').style.display = 'none';
-//   document.getElementById('f').style.display = 'none';
-//   document.getElementById('g').style.display = 'none';
-//   document.getElementById('h').style.display = 'none';
-//   document.getElementById('i').style.display = 'none';
-//   document.getElementById('j').style.display = 'none';
-//   document.getElementById('k').style.display = 'none';
+function hide(){
+  document.getElementById('a').style.display = 'none';
+  document.getElementById('b').style.display = 'none';
+  document.getElementById('c').style.display = 'none';
+  document.getElementById('d').style.display = 'none';
+  document.getElementById('e').style.display = 'none';
+  document.getElementById('f').style.display = 'none';
+  document.getElementById('g').style.display = 'none';
+  document.getElementById('h').style.display = 'none';
+  document.getElementById('i').style.display = 'none';
+  document.getElementById('j').style.display = 'none';
+  document.getElementById('k').style.display = 'none';
   
 }
 </script>
