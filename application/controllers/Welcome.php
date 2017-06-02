@@ -48,4 +48,9 @@ public function loadsayso()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('sayso');
 	}
+public function loadfaq()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('faq');
+	}	
 }

@@ -31,11 +31,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
      --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
+    <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="loadsayso" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
+    <a href="loadfaq" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
+    <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
   <div class="w3-panel w3-large">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -73,62 +73,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
   </header>
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
-  <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
-  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/about.jpg') ?>" style="width:100%">
-  
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
-  </div>
 </div> 
-<script>
-var slideIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}    
-    x[slideIndex-1].style.display = "block";  
-   currentDiv(slideIndex);
-    // if (hover==true) {
-    //   setTimeout(carousel, 20000);
-    // }
-    setTimeout(carousel, 6000); // Change image every 2 seconds
-}
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  // var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  // for (i = 0; i < dots.length; i++) {
-  //    dots[i].className = dots[i].className.replace(" w3-orange", "");
-  // }
-   x[slideIndex-1].style.display = "block";  
-  // dots[slideIndex-1].className += " w3-orange";
-}
-</script>
 <!-- insert here -->
 
 <script>
