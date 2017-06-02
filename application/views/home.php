@@ -147,11 +147,11 @@ function w3_close() {
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
-    <div class="w3-third">
+    <div class="w3-third w3-center">
       <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
-    <div class="w3-twothird">
-      <p class="w3-text-white">dummy text this is used to enter describtion about life values foundation</p>
+    <div class="w3-twothird w3-light-grey">
+      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation        uwgqiehufjnwue8ieujfnmkkjuh ejwuygwfebjmn nkwuekyfiukwjekfmlckuwyoeifnwjfegku</p><br><br>
     </div>    
   </div>
   </footer>
@@ -211,12 +211,12 @@ function w3_close() {
       </header>
       <div class="w3-container">
       <!-- create form here -->
-        <form action="" autocomplete="on" method="post">
+        <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" name="Sign In"/>
-        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up" formmethod="get" formaction="">
-          
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
+        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
+         
         </form>
       </div>
     </div>
