@@ -13,19 +13,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
 </style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-light-grey w3-content" style="background-color: #f2f2f2; max-width:1600px;">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-yellow w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
     <!-- <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br> -->
-    <h4><b>GIANT WHEEL</b></h4>
-    <!-- <p class="w3-text-grey">Template by W3.CSS</p>
+    <!-- <h4><b>GIANT WHEEL</b></h4>
+     --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
   <div class="w3-bar-block">
     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
@@ -49,10 +49,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-main" style="margin-left:200px">
 
   <!-- Header -->
-  <header class=" w3-top w3-yellow" id="portfolio" style=" padding-top:1%; padding-bottom:1% ; opacity: 0.9">
+  <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
     <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
     <div class="w3-cell-row">
@@ -69,11 +69,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- </div> -->
   </header>
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%;" >
+<div class="w3-content w3-display-container" style="max-width:100%; padding-top: 10%;" >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
-  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/01.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/02.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image" src="<?php echo base_url('images/slides/03.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/01.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/02.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/03.jpg') ?>" style="width:100%">
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
@@ -97,7 +97,7 @@ function carousel() {
     if (slideIndex > x.length) {slideIndex = 1}    
     x[slideIndex-1].style.display = "block";  
     currentDiv(slideIndex);
-    setTimeout(carousel, 4000); // Change image every 2 seconds
+    setTimeout(carousel, 6000); // Change image every 2 seconds
 }
 showDivs(slideIndex);
 
@@ -140,24 +140,21 @@ function w3_close() {
 }
 </script>
 
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <img src="<?php echo base_url('images/lvf-green.png') ?>" height=270px width=270px/>
+        </div>
+    <div class="w3-twothird">
+      <p></p>
+    </div>    
+  </div>
+  </footer>
+
 <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Us </b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p><br>contact@giantwheelmag.com<br><br></p>
-      </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
-        </p>
-      </div>
-    </div>
+  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;">
+    <h4 id="contact"><b>Let's Get In Touch!</b></h4>
     <hr class="w3-opacity">
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -174,21 +171,27 @@ function w3_close() {
       </div>
       <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Feedback</button>
     </form>
+    <h4 id="contact"><b>Contact Us </b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p><br>contact@giantwheelmag.com<br><br></p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-white">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <img src="<?php echo base_url('images/b1.jpg') ?>"/>
-        </div>
-    <div class="w3-twothird">
-      <p></p>
-    </div>    
-  </div>
-  </footer>
+
   
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  <div class="w3-black w3-center w3-padding-24"></div>
 
 <!-- login popup -->
 <center>
