@@ -110,7 +110,7 @@ function hide(){
 }
 </script>
   <div class="w3-container">
-  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px;">
+  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
     <ul class="w3-ul" style="list-style-type:disc;">
     <style type="text/css">
     </style>
