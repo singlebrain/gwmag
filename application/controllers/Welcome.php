@@ -43,4 +43,9 @@ public function loadcontact()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('contact');
 	}	
+public function loadsayso()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('sayso');
+	}
 }
