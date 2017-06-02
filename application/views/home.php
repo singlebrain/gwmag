@@ -152,19 +152,17 @@ function w3_close() {
       <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
     <div class="w3-twothird">
-      <p>dummy text this is used to enter describtion about life values foundation</p>
+      <p class="w3-text-white">dummy text this is used to enter describtion about life values foundation</p>
     </div>    
   </div>
   </footer>
 
 <!-- Contact Section -->
-<<<<<<< HEAD
+
   <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.7">
-    <h4 class="w3-light-grey" id="contact"><b> Let's Get In Touch!</b></h4>
-=======
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;">
-    <h4 id="contact"><b>Get In Touch!!!</b></h4>
->>>>>>> d9427d6c1ef09b92e6fd313ec8e31f2798925765
+    <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
+
+
     <hr class="w3-opacity">
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
