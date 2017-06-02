@@ -3,19 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>GWMag</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
+<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
 <style>
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
+/*body {font-family: "Verdana":sans-serif;background-image: url("<?php echo base_url('images/3.jpg') ?>");}*/
+body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
-<body class="w3-light-grey w3-content" style="background-color: #f2f2f2; max-width:1600px;">
+<body>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
@@ -72,7 +75,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
 <div class="w3-content w3-display-container" style="max-width:100%; padding-top: 10%;" >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
   <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/about.jpg') ?>" style="width:100%">
-  
+
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
@@ -80,8 +83,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
   </div>
-</div>
-
+</div> 
 <script>
 var slideIndex = 0;
 carousel();
@@ -95,7 +97,10 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}    
     x[slideIndex-1].style.display = "block";  
-    currentDiv(slideIndex);
+   currentDiv(slideIndex);
+    // if (hover==true) {
+    //   setTimeout(carousel, 20000);
+    // }
     setTimeout(carousel, 6000); // Change image every 2 seconds
 }
 showDivs(slideIndex);
@@ -143,17 +148,20 @@ function w3_close() {
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
     <div class="w3-third">
-      <img src="<?php echo base_url('images/lvf-green.png') ?>" height=270px width=270px/>
+      <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
     <div class="w3-twothird">
-      <p></p>
+      <p class="w3-text-white">dummy text this is used to enter describtion about life values foundation</p>
     </div>    
   </div>
   </footer>
 
 <!-- Contact Section -->
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;">
-    <h4 id="contact"><b>Let's Get In Touch!</b></h4>
+
+  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.7">
+    <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
+
+
     <hr class="w3-opacity">
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -172,16 +180,16 @@ function w3_close() {
     </form>
     <h4 id="contact"><b>Contact Us </b></h4>
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+      <div class="w3-third w3-yellow">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
         <p><br>contact@giantwheelmag.com<br><br></p>
       </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+      <div class="w3-third w3-lime">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
         <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
       </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+      <div class="w3-third w3-khaki">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-black"></i></p>
         <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
         </p>
       </div>
@@ -190,7 +198,7 @@ function w3_close() {
 
 
   
-  <div class="w3-black w3-center w3-padding-24"></div>
+  <!-- <div class="w3-black w3-center w3-padding-24"></div> -->
 
 <!-- login popup -->
 <center>
@@ -199,14 +207,14 @@ function w3_close() {
       <header class="w3-container w3-blue"> 
         <span onclick="document.getElementById('id01').style.display='none'" 
         class="w3-button w3-display-topright">&times;</span>
-        <h2>Login</h2>
+        <h2 style=>Login</h2>
       </header>
       <div class="w3-container">
       <!-- create form here -->
         <form action="" autocomplete="on" method="post">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sigin In" name="signin"/>
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" name="Sign In"/>
         <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up" formmethod="get" formaction="">
           
         </form>
