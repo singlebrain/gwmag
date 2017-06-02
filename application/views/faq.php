@@ -109,8 +109,11 @@ function hide(){
   
 }
 </script>
-  <div class="w3-container w3-content w3-yellow w3-text-blue" style="padding-top:70px;">
-    <ul class="w3-ul" style="list-style-type:disc; padding-left:30px;">
+  <div class="w3-container">
+  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px;">
+    <ul class="w3-ul" style="list-style-type:disc;">
+    <style type="text/css">
+    </style>
     <!-- qn1 -->
     <li><a href="javascript:void(null)" onclick="toggle('a')">What is this website all about?</a>
     <p id='a' style="display:none;">This is the official website of GIANT WHEEL, India’s first life values and life skills comic monthly.
@@ -163,6 +166,10 @@ Eg. 2.
 If you subscribe in the month of March your first issue will be sent to you on the first week of June.</p></li>
     <ol>
   </div>
+  <div style="float:right">
+    <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
+  </div>
+ </div> 
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
