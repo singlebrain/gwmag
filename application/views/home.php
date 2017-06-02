@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;opacity: 0.7" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;opacity: 0.9" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
@@ -151,15 +151,16 @@ function w3_close() {
     <div class="w3-third w3-center">
       <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
+<br>
     <div class="w3-twothird w3-light-grey">
-      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation        uwgqiehufjnwue8ieujfnmkkjuh ejwuygwfebjmn nkwuekyfiukwjekfmlckuwyoeifnwjfegku</p><br><br>
+      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation    </p><br><br>
     </div>    
   </div>
   </footer>
 
 <!-- Contact Section -->
 
-  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.7">
+  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.9">
     <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
 
 
@@ -180,7 +181,7 @@ function w3_close() {
       <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Feedback</button>
     </form>
     <h4 id="contact"><b>Contact Us </b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px ;opacity: 2">
       <div class="w3-third w3-yellow">
         <p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
         <p><br>contact@giantwheelmag.com<br><br></p>
