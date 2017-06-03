@@ -63,5 +63,10 @@ public function loadjoinus()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('joinus');
 	}		
+public function loadsample()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('sample');
+	}		
 
 }
