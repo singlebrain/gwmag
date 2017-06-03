@@ -175,9 +175,6 @@ If you subscribe in the month of March your first issue will be sent to you on t
   <div class="w3-row-padding">
   </div>
   </footer>
-
-
-
 <!-- login popup -->
 <center>
 <div id="id01" class="w3-modal">
@@ -201,7 +198,5 @@ If you subscribe in the month of March your first issue will be sent to you on t
   </div>
 <!-- End page content -->
 </div>
-
-
 </body>
 </html>
