@@ -53,4 +53,9 @@ public function loadfaq()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('faq');
 	}	
+public function loaduslogin()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('uslogin');
+	}	
 }
