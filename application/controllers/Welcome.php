@@ -58,4 +58,10 @@ public function loadgift()
 		//redirect(base_url().'index.php/login_cont/loginview');
 		$this->load->view('gift');
 	}		
+public function loadjoinus()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('joinus');
+	}		
+
 }
