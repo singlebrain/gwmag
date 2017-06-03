@@ -71,6 +71,24 @@ public function loadjoinus()
 public function loadsample()
 	{
 		//redirect(base_url().'index.php/login_cont/loginview');
+		$index = 01;
+		$this->session->set_userdata('index',$index);
+		$this->load->view('sample');
+	}	
+	public function nextpage()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$index = $this->session->userdata('index');
+		$index=$index+1;
+		$this->session->set_userdata('index',$index);
+		$this->load->view('sample');
+	}	
+	public function prevpage()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$index = $this->session->userdata('index');
+		$index=$index-1;
+		$this->session->set_userdata('index',$index);
 		$this->load->view('sample');
 	}		
 }

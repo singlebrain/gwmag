@@ -75,19 +75,16 @@ i {
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
-    <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
+    <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> 
     <div class="w3-cell-row">
       <span class=" w3-left w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
-    <!-- <div class="w3-container">
-    <h1><b>My Portfolio</b></h1> -->
-    <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
-      <!-- <button class="w3-button w3-black">ALL</button> -->
+   
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
       <button  onclick="document.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
-    <!-- </div> -->
+    </div> -->
   </header>
 <!-- slider -->
 <!-- <div class="w3-content w3-display-container" style="max-width:100%; " >
@@ -108,10 +105,11 @@ function w3_close() {
 }
 </script>
 <!-- about -->
-<div class="w3-content w3-display-container" style="max-width:100%; " >
-  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/sample/01.jpg') ?>" style="width:100%">
-  <a href=""><i class="arrow right" style="float: right;"></i></a>
-  <a href=""><i class="arrow left" style="float: left;"></i></a>
+<div class="w3-content w3-display-container" style="max-height:40px; " >
+<?php $index = $this->session->userdata('index');?>
+  <img class="w3-image w3-animate-right" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
+  <a href="<?php echo base_url().'index.php/Welcome/nextpage' ?>""><i class="arrow right" style="float: right;">next</i></a>
+  <a href="<?php echo base_url().'index.php/Welcome/prevpage' ?>""><i class="arrow left" style="float: left;">prev</i></a>
   </div>
   <!-- Footer -->
   <!-- <footer class="w3-container w3-padding-32">
