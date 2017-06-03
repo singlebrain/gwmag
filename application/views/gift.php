@@ -91,10 +91,169 @@ function w3_close() {
 
 </script>
   <div class="w3-container">
-  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
-  </div>
-  <div style="float:right">
-    <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
+  <!-- <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
+  </div> -->
+  <div>
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="images/top3.jpg" width="100%" height="inherit">
+      <div id="layer-form">
+        <form  name="ite" id="ite"  method="post" action="form_process.php">    
+          <table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="40" colspan="2" align="center" valign="middle" bgcolor="#E24323" class="td_red" ><span class="Rate_title">GIFT A SUBSCRIPTION</span> </td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" valign="middle" class="title">Please Enter Your Details </td>
+            </tr>
+            <tr>
+              <td height="30" colspan="2" align="center" valign="middle" class="style1"><table width="600" border="0" cellpadding="0" cellspacing="0" class="tbl2">
+                 <tr>
+                   <td height="10" align="right" valign="middle" class="text"></td>
+                   <td height="10" align="left"></td>
+                 </tr>
+                 <tr>
+              <td height="30" align="right" valign="middle" class="text">Your Name </td>
+              <td width="362" align="left"><input name="g_name" type="text" class="style5" id="g_name" size="40" />
+                <input name="gift" type="hidden" id="gift" value="yes"></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Your Mobile Number </td>
+              <td align="left"><input name="g_phone" type="text" class="style5" id="g_phone" size="40" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Your Email Address </td>
+              <td align="left"><input name="g_email" type="text" class="style5" id="g_email" size="40" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Message or Greeting you want to convey </td>
+              <td align="left"><textarea name="g_mesg" cols="40" rows="4" class="style5" id="g_mesg"></textarea></td>
+            </tr>
+            <tr>
+              <td height="10" align="right" valign="middle" class="text">&nbsp;</td>
+              <td height="10" align="left">&nbsp;</td>
+            </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30" colspan="2" align="center" valign="middle" class="style1">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="20" colspan="2" align="center" valign="middle" class="title">Please fill in the details of the person to whom you want gift this Subscription. </td>
+            </tr>
+     
+            <tr>
+              <td height="30" colspan="2" align="center" valign="top" class="style2"><strong class="titlered">Please note: All the fields are mandatory </strong></td>
+            </tr>
+           
+            <tr>
+              <td height="30" colspan="2" align="center" valign="middle" class="style2">
+        <table width="600" border="0" cellpadding="0" cellspacing="0" class="tbl2">
+                 <tr>
+                   <td height="10" align="right" valign="middle" class="text"></td>
+                   <td height="10" align="left"></td>
+                 </tr>
+                 <tr>
+              <td width="288" height="30" align="right" valign="middle" class="text">No. of Years </td>
+              <td align="left"><select name="years" class="drop" id="years">
+                  <option value="1">1 Year</option>
+                  <option value="2">2 Years</option>
+                  <option value="3" selected="selected">3 Years</option>
+                </select>              </td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Create User ID</td>
+              <td width="362" align="left"><input name="u_id" type="text" class="style5" id="u_id" size="40" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Password</td>
+              <td align="left"><input name="pass" type="password" class="style5" id="pass" size="40" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Re-type Password </td>
+              <td align="left"><input name="pass2" type="password" class="style5" id="pass2" size="40"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Full Name</td>
+              <td align="left"><input name="name" type="text" class="style5" id="name" size="40"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Address - Door No. / Block </td>
+              <td align="left"><input name="add1" type="text" class="style5" id="add1" size="40" maxlength="50"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Address - Area / Colony </td>
+              <td align="left"><input name="add2" type="text" class="style5" id="add2" size="40" maxlength="50"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">City</td>
+              <td align="left"><input name="city" type="text" class="style5" id="city" size="40"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Pincode</td>
+              <td align="left"><input name="pin" type="text" class="style5" id="pin" size="40" maxlength="6"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Mobile Phone</td>
+              <td align="left"><input name="phone" type="text" class="style5" id="phone" size="40" maxlength="10"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Email Id</td>
+              <td align="left"><input name="email" type="text" class="style5" id="email" size="40"/></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="text">Coupon Code (if you have one) </td>
+              <td align="left"><input name="ccode" type="text" class="style5" id="ccode" size="40"/></td>
+            </tr>
+            <tr>
+              <td height="10" align="right" valign="middle" class="text"></td>
+              <td height="10" align="left"></td>
+            </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30" align="right" valign="middle" class="style2">&nbsp;</td>
+              <td align="left">&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center"><a href="javascript:void(null)"><img src="images/reg.png" border="0" onClick="MM_callJS('validate()')"  ></a>                <!-- <input type="image" name="submit" src="images/reg.png"  alt="Submit" /> --></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">&nbsp;</td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div id="layer-rates">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="70" colspan="4" align="center" bgcolor="#E24323"><span class="Rate_title">Subscribe to get GIANT WHEEL <br />
+            right at your doorstep! </span> </td>
+        </tr>
+        <tr>
+          <td width="29%" height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">1 year </td>
+          <td width="71%" align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 540 (inclusive of postage)  </td>
+        </tr>
+        <tr>
+          <td height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">2 years </td>
+          <td align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 1020  (inclusive of postage)  </td>
+        </tr>
+        <tr>
+          <td height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">3 years </td>
+          <td align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 1440  (inclusive of postage)  </td>
+        </tr>
+      </table>
+     <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
+          </tr>
+      </table>
+    </div></td>
+  </tr>
+</table>
   </div>
  </div> 
   <!-- Footer -->
