@@ -3,20 +3,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>GWMag</title>
+<title>About</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
-<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
-<style>
-.mySlides {display:none}
+<!-- <link rel="stylesheet" href="<?php //echo base_url('images/slides/my-slider.css') ?>"/> -->
+<!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
+ -->
+ <style>
+/*.mySlides {display:none}
 w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding: ;}
-body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+*/body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
 </style>
 <body>
 
@@ -35,7 +52,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="loadsayso" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
     <a href="loadfaq" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
-    <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-text-teal w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
     <a href="loadjoinus" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-users fa-fw w3-margin-right"></i>JOIN US</a>
   </div>
   <div class="w3-panel w3-large">
@@ -73,8 +90,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <!-- </div> -->
   </header>
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%; " >
-</div> 
+<!-- <div class="w3-content w3-display-container" style="max-width:100%; " >
+</div>  -->
 
 <!-- insert here -->
 
@@ -90,15 +107,17 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-<!-- contact -->
+<!-- about -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
-  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/contact.jpg') ?>" style="width:100%">
+  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/sample/01.jpg') ?>" style="width:100%">
+  <a href=""><i class="arrow right" style="float: right;"></i></a>
+  <a href=""><i class="arrow left" style="float: left;"></i></a>
   </div>
   <!-- Footer -->
-  <footer class="w3-container w3-padding-32">
+  <!-- <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
     <div class="w3-third w3-center">
-      <img src="<?php echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
+      <img src="<?php// echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
         </div>
 <br>
     <div class="w3-twothird w3-light-grey" style="opacity: 0.9">
@@ -106,7 +125,7 @@ function w3_close() {
     </div>    
   </div>
   </footer>
-
+ -->
 
 
 <!-- login popup -->
