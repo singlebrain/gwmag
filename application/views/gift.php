@@ -90,13 +90,17 @@ function w3_close() {
 }
 
 </script>
-  <div class="w3-container">
+  <div class="w3-container w3-row" style="margin-top:60px;">
   <!-- <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
   </div> -->
-  <div>
+  <div class="w3-third">
+    
+  </div>
+
+  <div class="two-third">
   <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td><img src="images/top3.jpg" width="100%" height="inherit">
+    <!-- <td><img src="images/top3.jpg" width="100%" height="inherit"> -->
       <div id="layer-form">
         <form  name="ite" id="ite"  method="post" action="form_process.php">    
           <table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
