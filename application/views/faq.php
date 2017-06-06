@@ -3,20 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>GWMag</title>
+<title>FAQ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
-<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
-<style>
-.mySlides {display:none}
+<!-- <link rel="stylesheet" href="<?php //echo base_url('images/slides/my-slider.css') ?>"/>
+<script src="<?php //echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
+ --><style>
+/*.mySlides {display:none}
 w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding: ;}
-body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
+*/body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
 <body>
