@@ -21,8 +21,7 @@
 <link rel="stylesheet" href="style/style.css" />
 <link rel="stylesheet" href="style/player.css" />
 <link rel="stylesheet" href="style/phoneTemplate.css" />
-
-<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>	
 <body>

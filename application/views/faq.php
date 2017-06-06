@@ -8,7 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
 <script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -83,39 +82,44 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 // Script to open and close sidebar
 var d=document;
 function w3_open() {
-    d.getElementById("mySidebar").style.display = "block";
-    d.getElementById("myOverlay").style.display = "block";
+  $("#mySidebar").show();
+  $("#myOverlay").show();
+    // d.getElementById("mySidebar").style.display = "block";
+    // d.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
-    d.getElementById("mySidebar").style.display = "none";
-    d.getElementById("myOverlay").style.display = "none";
+  $("#mySidebar").hide();
+  $("#myOverlay").hide();
+    // d.getElementById("mySidebar").style.display = "none";
+    // d.getElementById("myOverlay").style.display = "none";
 }
-function toggle(q){
-  hide();
-  d.getElementById(q).style.color = "black";
-  d.getElementById(q).style.display = "block";
+// function toggle(q){
+//   hide();
+//   d.getElementById(q).style.color = "black";
+//   d.getElementById(q).style.display = "block";
 
-}
-function hide(){
-  d.getElementById('a').style.display = 'none';
-  d.getElementById('b').style.display = 'none';
-  d.getElementById('c').style.display = 'none';
-  d.getElementById('d').style.display = 'none';
-  d.getElementById('e').style.display = 'none';
-  d.getElementById('f').style.display = 'none';
-  d.getElementById('g').style.display = 'none';
-  d.getElementById('h').style.display = 'none';
-  d.getElementById('i').style.display = 'none';
-  d.getElementById('j').style.display = 'none';
-  d.getElementById('k').style.display = 'none';
+// }
+// function hide(){
+//   d.getElementById('a').style.display = 'none';
+//   d.getElementById('b').style.display = 'none';
+//   d.getElementById('c').style.display = 'none';
+//   d.getElementById('d').style.display = 'none';
+//   d.getElementById('e').style.display = 'none';
+//   d.getElementById('f').style.display = 'none';
+//   d.getElementById('g').style.display = 'none';
+//   d.getElementById('h').style.display = 'none';
+//   d.getElementById('i').style.display = 'none';
+//   d.getElementById('j').style.display = 'none';
+//   d.getElementById('k').style.display = 'none';
   
-}
-$(document).ready(function(){
-  $(li).click(function(){
+// }
+  function togle(q){
+    // hide();
+    $(q).toggle();
+    $(q).css("color","black");
 
-  });
-});
+  }
 </script>
   <div class="w3-container">
   <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
@@ -123,11 +127,11 @@ $(document).ready(function(){
     <style type="text/css">
     </style>
     <!-- qn1 -->
-    <li><a href="javascript:void(null)" onclick="toggle('a')">What is this website all about?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#a')">What is this website all about?</a>
     <p id='a' style="display:none;">This is the official website of GIANT WHEEL, India’s first life values and life skills comic monthly.
 </p></li>
     <!-- qn2 -->
-    <li><a href="javascript:void(null)" onclick="toggle('b')">What kind of magazine is GIANT WHEEL?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#b')">What kind of magazine is GIANT WHEEL?</a>
     <p id='b' style="display:none;">GIANT WHEEL addresses three key needs that are felt today by parents and educators alike.
 The first need is to provide valuable and insightful inputs on the life values front. Life values are deteriorating in today’s fast paced world and children are being inundated by confusing and conflicting messages from media, peers and family. As family structures break apart and quality time decreases, parents are finding it very difficult to provide the right inputs. The GIANT WHEEL magazine aims to fill that gap in an engaging, interesting and non-preachy manner. 
  
@@ -135,34 +139,34 @@ The second need is the much required Life Skills. Reading, writing, memorizing, 
  
 The third need is to spend quality time with children. The GIANT WHEEL magazine is an excellent tool to spend quality time with your child.</p></li>
     <!-- qn3 -->
-    <li><a href="javascript:void(null)" onclick="toggle('c')">What more does this magazine have?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#c')">What more does this magazine have?</a>
     <p id='c' style="display:none;">There are sections featuring debates, insights, biographies, history, science, career guidance, quotes, facts, jokes and lots more.</p></li>
     <!-- qn4 -->
-    <li><a href="javascript:void(null)" onclick="toggle('d')">Who is this magazine for?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#d')">Who is this magazine for?</a>
     <p id='d' style="display:none;">For all children who have started reading for themselves.</p></li>
     <!-- qn5 -->
-    <li><a href="javascript:void(null)" onclick="toggle('e')">My child is too young to read for himself/herself. Can I not read it to him/her?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#e')">My child is too young to read for himself/herself. Can I not read it to him/her?</a>
     <p id='e' style="display:none;">You most certainly can.</p></li>
     <!-- qn6 -->
-    <li><a href="javascript:void(null)" onclick="toggle('f')">How do I get this magazine?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#f')">How do I get this magazine?</a>
     <p id='f' style="display:none;">To get this magazine, all you have to do is to click on the SUBSCRIBE button and subscribe to the magazine.</p></li>
     <!-- qn7 -->
-    <li><a href="javascript:void(null)" onclick="toggle('g')">I filled in the subscription form but when I clicked the REGISTER AND PAY button, the screen went blank / the PayUmoney website did not work / my internet connection failed / my system re-started. What do I do?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#g')">I filled in the subscription form but when I clicked the REGISTER AND PAY button, the screen went blank / the PayUmoney website did not work / my internet connection failed / my system re-started. What do I do?</a>
     <p id='g'style="display:none;">Your registration process has been interrupted. This is what you would need to do. 
 1. Press the LOGIN button which you can find on top of every page.
 2. Using your Login Id and Password, Log in to your account. 
 3. Then press the MAKE PAYMENT button in the login page to make the payment.Once the payment is made, your registration process will be completed and you will get a receipt.</p></li>
     <!-- qn8 -->
-    <li><a href="javascript:void(null)" onclick="toggle('h')">My registration process has been interrupted and I tried to login as mention in the above question, but I was not able to login. What do I do now?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#h')">My registration process has been interrupted and I tried to login as mention in the above question, but I was not able to login. What do I do now?</a>
     <p id='h' style="display:none;">You are not able to login, because your details have not been registered successfully with us. What you could do is: Press the SUBSCRIBE button, go through the subscription process all over again and complete the process successfully.</p></li>
     <!-- qn9 -->
-    <li><a href="javascript:void(null)" onclick="toggle('i')">I am unable to make the payment through the PayUmoney website. What do I do?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#i')">I am unable to make the payment through the PayUmoney website. What do I do?</a>
     <p id='i' style="display:none;">You can drop us an e-mail to contact@giantwheelmag.com mentioning your user id and we will send you our bank details. You can then do an online fund transfer to us. Once that is done please send us an email with your transaction id. We wil then activate your acount.</p></li>
     <!-- qn10 -->
-    <li><a href="javascript:void(null)" onclick="toggle('j')">I made the payment successfully, but I did not get a receipt. What now?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#j')">I made the payment successfully, but I did not get a receipt. What now?</a>
     <p id='j' style="display:none;">Nothing to worry about. Just get in touch with us through email or phone and we will sort the issue out.</p></li>
     <!-- qn11 -->
-    <li><a href="javascript:void(null)" onclick="toggle('k')">I have successfully subscribed. When will I get my first issue?</a>
+    <li><a href="javascript:void(null)" onclick="togle('#k')">I have successfully subscribed. When will I get my first issue?</a>
     <p id='k' style="display:none;">When you subscribe to our magazine in a particular month, your first issue will be dispatched on the first week of the next month. 
 
 Eg. 1. 
