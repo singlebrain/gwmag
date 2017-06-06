@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 .mySlides {display:none}
 w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding: ;}
-body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
 <body>
@@ -110,8 +110,13 @@ function hide(){
   
 }
 </script>
+<div class="w3-row-padding">
+    <div class=" w3-center" style="margin-top: 60px">
+      <img src="<?php echo base_url('images/gwlogo.png') ?>">
+        </div>
   <div class="w3-container">
-  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
+
+  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style=" padding-left:40px">
     <ul class="w3-ul" style="list-style-type:disc;">
     <style type="text/css">
     </style>

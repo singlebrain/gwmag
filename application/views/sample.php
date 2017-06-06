@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>About</title>
+<title>Read Sample</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
@@ -16,13 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*.mySlides {display:none}
 w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding: ;}
-*/body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+*/body {font-family: "Verdana":sans-serif;}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 i {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+    size: 200px
 }
 
 .right {
@@ -38,16 +39,16 @@ i {
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
+<!-- <nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <!-- <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br> -->
+    //<img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br> -->
     <!-- <h4><b>GIANT WHEEL</b></h4>
      --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
-  <div class="w3-bar-block">
+  <!-- <div class="w3-bar-block">
     <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
     <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="loadsayso" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
@@ -64,16 +65,16 @@ i {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </nav>
-
+ --> 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
-</div>
+<!-- <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
+</div> -->
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:200px">
 
   <!-- Header -->
-  <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
+  <!-- <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9"> -->
   <!-- opacity -->
     <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> 
     <div class="w3-cell-row">
@@ -85,13 +86,13 @@ i {
       <button  onclick="document.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
     </div> -->
-  </header>
+  <!-- </header> -->
 <!-- slider -->
 <!-- <div class="w3-content w3-display-container" style="max-width:100%; " >
 </div>  -->
 
 <!-- insert here -->
-
+<!-- 
 <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -103,13 +104,13 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-</script>
+</script> -->
 <!-- about -->
-<div class="w3-content w3-display-container" style="max-height:40px; " >
+<div class="w3-content w3-display-container" style=" padding-top: 5%;" >
 <?php $index = $this->session->userdata('index');?>
-  <img class="w3-image w3-animate-right" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
+  <img class="w3-image w3-animate-right" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" >
   <a href="<?php echo base_url().'index.php/Welcome/nextpage' ?>""><i class="arrow right" style="float: right;">next</i></a>
-  <a href="<?php echo base_url().'index.php/Welcome/prevpage' ?>""><i class="arrow left" style="float: left;">prev</i></a>
+  <a href="<?php echo base_url().'index.php/Welcome/prevpage' ?>""><i class="arrow left" style="float: left;">ʌǝɹd</i></a>
   </div>
   <!-- Footer -->
   <!-- <footer class="w3-container w3-padding-32">
@@ -127,7 +128,7 @@ function w3_close() {
 
 
 <!-- login popup -->
-<center>
+<!-- <center>
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
@@ -136,8 +137,8 @@ function w3_close() {
         <h2 style=>Login</h2>
       </header>
       <div class="w3-container">
-      <!-- create form here -->
-        <form action="" autocomplete="on" method="get">
+      create form here -->
+       <!--  <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
         <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
@@ -147,9 +148,9 @@ function w3_close() {
       </div>
     </div>
   </div>
-<!-- End page content -->
-</div>
-
+End page content -->
+<!-- </div>  -->
+ 
 
 </body>
 </html>
