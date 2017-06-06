@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>SUBSCRIBE</button>
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="document.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-plus w3-margin-right"></i>RENEW</button>
+      <button  onclick="d.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-plus w3-margin-right"></i>RENEW</button>
     </div>
     <!-- </div> -->
   </header>
@@ -78,15 +78,16 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 <!-- insert here -->
 
 <script>
+var d=document;
 // Script to open and close sidebar
 function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+    d.getElementById("mySidebar").style.display = "block";
+    d.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+    d.getElementById("mySidebar").style.display = "none";
+    d.getElementById("myOverlay").style.display = "none";
 }
 </script>
 <!-- about -->
@@ -113,7 +114,7 @@ function w3_close() {
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
+        <span onclick="d.getElementById('id01').style.display='none'" 
         class="w3-button w3-display-topright">&times;</span>
         <h2 style=>Login</h2>
       </header>
