@@ -7,7 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
 <script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -80,35 +81,41 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 
 <script>
 // Script to open and close sidebar
+var d=document;
 function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+    d.getElementById("mySidebar").style.display = "block";
+    d.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+    d.getElementById("mySidebar").style.display = "none";
+    d.getElementById("myOverlay").style.display = "none";
 }
 function toggle(q){
   hide();
-   document.getElementById(q).style.display = "block";
-   document.getElementById(q).style.color = "black";
+  d.getElementById(q).style.color = "black";
+  d.getElementById(q).style.display = "block";
 
 }
 function hide(){
-  document.getElementById('a').style.display = 'none';
-  document.getElementById('b').style.display = 'none';
-  document.getElementById('c').style.display = 'none';
-  document.getElementById('d').style.display = 'none';
-  document.getElementById('e').style.display = 'none';
-  document.getElementById('f').style.display = 'none';
-  document.getElementById('g').style.display = 'none';
-  document.getElementById('h').style.display = 'none';
-  document.getElementById('i').style.display = 'none';
-  document.getElementById('j').style.display = 'none';
-  document.getElementById('k').style.display = 'none';
+  d.getElementById('a').style.display = 'none';
+  d.getElementById('b').style.display = 'none';
+  d.getElementById('c').style.display = 'none';
+  d.getElementById('d').style.display = 'none';
+  d.getElementById('e').style.display = 'none';
+  d.getElementById('f').style.display = 'none';
+  d.getElementById('g').style.display = 'none';
+  d.getElementById('h').style.display = 'none';
+  d.getElementById('i').style.display = 'none';
+  d.getElementById('j').style.display = 'none';
+  d.getElementById('k').style.display = 'none';
   
 }
+$(document).ready(function(){
+  $(li).click(function(){
+
+  });
+});
 </script>
 <div class="w3-row-padding">
     <div class=" w3-center" style="margin-top: 60px">
@@ -186,7 +193,7 @@ If you subscribe in the month of March your first issue will be sent to you on t
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
+        <span onclick="d.getElementById('id01').style.display='none'" 
         class="w3-button w3-display-topright">&times;</span>
         <h2 style=>Login</h2>
       </header>
