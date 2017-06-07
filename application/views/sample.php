@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$index = $this->session->userdata('index');
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,8 +94,28 @@ i {
 <!-- insert here -->
 
 <script>
+var path="<?php echo base_url().'images/sample/' ?>";
 var d=document;
+var index=<?php echo $index ?>;
 // Script to open and close sidebar
+function next(){
+  index=index+1;
+  // alert(index);
+  <?php $index=$index+1; ?>;
+  var npath=path+index+'.jpg';
+  // $.get();
+  $('#page').attr('src',npath);  
+}
+
+function prev(){
+  index=index-1;
+  <?php $index=$index-1; ?>;
+  if(index==0){
+   index=1; 
+  }
+  var npath=path+index+'.jpg';
+  $('#page').attr('src',npath);
+}
 function w3_open() {
   $("#mySidebar").show();
   $("#myOverlay").show();
@@ -111,10 +132,9 @@ function w3_close() {
 </script>
 <!-- about -->
 <div class="w3-content w3-display-container" style="max-height:40px; " >
-<?php $index = $this->session->userdata('index');?>
-  <img class="w3-image w3-animate-right" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
-  <a href="<?php echo base_url().'index.php/Welcome/nextpage' ?>""><i class="arrow right" style="float: right;">next</i></a>
-  <a href="<?php echo base_url().'index.php/Welcome/prevpage' ?>""><i class="arrow left" style="float: left;">prev</i></a>
+  <img class="w3-image w3-animate-right" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
+  <a href="javascript:void(null)" onclick="next()"><i class="arrow right" style="float: right;">next</i></a>
+  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left" style="float: left;">prev</i></a>
   </div>
   <!-- Footer -->
   <!-- <footer class="w3-container w3-padding-32">
