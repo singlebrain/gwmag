@@ -1,4 +1,5 @@
 <?php
+$portno='/';
 /**
  * CodeIgniter
  *
@@ -104,7 +105,7 @@ class CI_Config {
 			}
 			else
 			{
-				$base_url = 'http://localhost/';
+				$base_url = 'http://localhost:8080/'+$portno; //findport
 			}
 
 			$this->set_item('base_url', $base_url);

@@ -90,5 +90,11 @@ public function loadsample()
 		$index=$index-1;
 		$this->session->set_userdata('index',$index);
 		$this->load->view('sample');
-	}		
+	}
+
+	public function testing()
+	{
+		//redirect(base_url().'index.php/login_cont/loginview');
+		$this->load->view('testing');
+	}			
 }

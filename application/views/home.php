@@ -7,10 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
-<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+</script>
 <style>
 .mySlides {display:none}
 w3-left, .w3-right, .w3-badge {cursor:pointer}
@@ -54,7 +54,6 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:200px">
-
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
@@ -65,28 +64,36 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <h1><b>My Portfolio</b></h1> -->
     <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="d.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
     <!-- </div> -->
   </header>
 <!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%; " >
+<div class="w3-content w3-display-container" id="slideshow" style="max-width:100%; " >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
   <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/1.jpg') ?>" style="width:100%">
   <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/2.jpg') ?>" style="width:100%">
   <img class="mySlides w3-image w3-animate-right" src="<?php echo base_url('images/slides/3.jpg') ?>" style="width:100%">
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <div class="w3-left w3-hover-text-khaki" id="left" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" id="right" onclick="plusDivs(1)">&#10095;</div>
     <!-- <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
   </div>
 </div> 
 <script>
+$(document).ready(function(){
+  $("#slideshow").on("swipeleft",function(){
+    plusDivs(-1);
+  });
+  $("#slideshow").on("swiperight",function(){
+    plusDivs(+1);
+  });                         
+});
 d=document;
 var slideIndex = 0;
 carousel();

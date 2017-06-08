@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
 <script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -64,10 +64,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <h1><b>My Portfolio</b></h1> -->
     <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>SUBSCRIBE</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="d.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-plus w3-margin-right"></i>RENEW</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
     <!-- </div> -->
   </header>

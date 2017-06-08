@@ -6,8 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <title>FAQ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?php echo base_url('css/w3.css') 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url('css/w3.css')?>"> 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" href="<?php //echo base_url('images/slides/my-slider.css') ?>"/>
 <script src="<?php //echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -19,7 +19,6 @@ w3-left, .w3-right, .w3-badge {cursor:pointer}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 </style>
 <body>
-
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
   <div class="w3-container">
@@ -47,14 +46,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </nav>
-
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
 </div>
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:200px">
-
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
@@ -65,19 +61,17 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
     <h1><b>My Portfolio</b></h1> -->
     <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="document.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
     <!-- </div> -->
   </header>
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
-
   </div>
 </div> 
-
 <script>
 // Script to open and close sidebar
 var d=document;
@@ -98,7 +92,6 @@ function w3_close() {
 //   hide();
 //   d.getElementById(q).style.color = "black";
 //   d.getElementById(q).style.display = "block";
-
 // }
 // function hide(){
 //   d.getElementById('a').style.display = 'none';
@@ -118,7 +111,6 @@ function w3_close() {
     // hide();
     $(q).toggle();
     $(q).css("color","black");
-
   }
 </script>
 <div class="w3-row-padding">
@@ -126,7 +118,6 @@ function w3_close() {
       <img src="<?php echo base_url('images/gwlogo.png') ?>">
         </div>
   <div class="w3-container">
-
   <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style=" padding-left:40px">
     <ul class="w3-ul" style="list-style-type:disc;">
     <style type="text/css">
@@ -173,12 +164,9 @@ The third need is to spend quality time with children. The GIANT WHEEL magazine 
     <!-- qn11 -->
     <li><a href="javascript:void(null)" onclick="togle('#k')">I have successfully subscribed. When will I get my first issue?</a>
     <p id='k' style="display:none;">When you subscribe to our magazine in a particular month, your first issue will be dispatched on the first week of the next month. 
-
 Eg. 1. 
 If you subscribe in the month of June, your first copy will be sent to you on the first week of July.
-
 However we are aligned to the school academic year and so we do not publish issues in the month of April and May.
-
 Eg. 2.
 If you subscribe in the month of March your first issue will be sent to you on the first week of June.</p></li>
     <ol>
