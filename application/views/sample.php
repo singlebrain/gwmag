@@ -8,7 +8,8 @@ $index = $this->session->userdata('index');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" href="<?php //echo base_url('images/slides/my-slider.css') ?>"/> -->
 <!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -75,17 +76,20 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
-  <!-- opacity -->
-    <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> 
+   <!-- opacity -->
+    <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
     <div class="w3-cell-row">
       <span class=" w3-left w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
-   
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
-      <button class=" w3-cell w3-button w3-container "><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="d.getElementById('id01').style.display='block'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+    <!-- <div class="w3-container">
+    <h1><b>My Portfolio</b></h1> -->
+    <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
+      <!-- <button class="w3-button w3-black">ALL</button> -->
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
     </div>
-    </div> -->
+    <!-- </div> -->
   </header>
 <!-- slider -->
 <!-- <div class="w3-content w3-display-container" style="max-width:100%; " >
@@ -94,6 +98,14 @@ h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
 <!-- insert here -->
 
 <script>
+$(document).ready(function(){
+  $("#page").on("swipeleft",function(){
+    next();
+  });
+  $("#page").on("swiperight",function(){
+    prev();
+  });                         
+});
 var path="<?php echo base_url().'images/sample/' ?>";
 var d=document;
 var index=<?php echo $index ?>;
@@ -131,8 +143,9 @@ function w3_close() {
 }
 </script>
 <!-- about -->
-<div class="w3-content w3-display-container" style="max-height:40px; " >
-  <img class="w3-image w3-animate-right" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
+<div class="w3-content w3-display-container" style="max-height:40px; padding-top: 70px;" >
+  <!-- <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="height: 100% width: 100%; max-height: 650px;"> -->
+  <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
   <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">prev</i></a>
   </div>
