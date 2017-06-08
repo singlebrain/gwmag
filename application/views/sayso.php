@@ -121,11 +121,10 @@ function w3_close() {
 
 
 <!-- login popup -->
-<center>
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        <span onclick="d.getElementById('id01').style.display='none'" 
+        <span onclick="$('#id01').hide();" 
         class="w3-button w3-display-topright">&times;</span>
         <h2 style=>Login</h2>
       </header>

@@ -114,17 +114,16 @@ function w3_close() {
 
 
 <!-- login popup -->
-<center>
-<div id="id01" class="w3-modal">
+
+<!-- <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        <span onclick="d.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
+        v
         <h2 style=>Login</h2>
       </header>
       <div class="w3-container">
       <!-- create form here -->
-        <form action="" autocomplete="on" method="get">
+        <!-- <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
         <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
@@ -133,7 +132,7 @@ function w3_close() {
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
 <!-- End page content -->
 </div>
 

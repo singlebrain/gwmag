@@ -8,7 +8,7 @@ $index = $this->session->userdata('index');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" href="<?php //echo base_url('images/slides/my-slider.css') ?>"/> -->
 <!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
@@ -19,7 +19,7 @@ w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding: ;}
 */body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
-i {
+.navi {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -133,8 +133,8 @@ function w3_close() {
 <!-- about -->
 <div class="w3-content w3-display-container" style="max-height:40px; " >
   <img class="w3-image w3-animate-right" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height:650px">
-  <a href="javascript:void(null)" onclick="next()"><i class="arrow right" style="float: right;">next</i></a>
-  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left" style="float: left;">prev</i></a>
+  <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
+  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">prev</i></a>
   </div>
   <!-- Footer -->
   <!-- <footer class="w3-container w3-padding-32">
@@ -152,11 +152,10 @@ function w3_close() {
 
 
 <!-- login popup -->
-<center>
 <div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        <span onclick="d.getElementById('id01').style.display='none'" 
+        <span onclick="$('#id01').hide();" 
         class="w3-button w3-display-topright">&times;</span>
         <h2 style=>Login</h2>
       </header>
