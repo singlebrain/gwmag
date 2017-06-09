@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
 </style>
 <body>
 <!-- Sidebar/menu -->
