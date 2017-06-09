@@ -1,0 +1,13 @@
+@media screen and (min-width: 993px) {
+
+    .mar{
+      margin-left: 250px;
+    }
+
+}
+
+.mySlides {display:none}
+w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding: ;}
+body {font-family: "Verdana":sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
