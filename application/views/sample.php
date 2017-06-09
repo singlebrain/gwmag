@@ -9,6 +9,7 @@ $index = $this->session->userdata('index');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
 <link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
+<script src="<?php echo base_url('js/custom.js')?>"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -124,19 +125,6 @@ function prev(){
   }
   var npath=path+index+'.jpg';
   $('#page').attr('src',npath);
-}
-function w3_open() {
-  $("#mySidebar").show();
-  $("#myOverlay").show();
-    // d.getElementById("mySidebar").style.display = "block";
-    // d.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  $("#mySidebar").hide();
-  $("#myOverlay").hide();
-    // d.getElementById("mySidebar").style.display = "none";
-    // d.getElementById("myOverlay").style.display = "none";
 }
 </script>
 <!-- about -->
