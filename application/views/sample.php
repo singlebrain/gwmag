@@ -114,7 +114,7 @@ function next(){
   <?php $index=$index+1; ?>;
   var npath=path+index+'.jpg';
   // $.get();
-  $('#page').attr('src',npath);  
+  $('#page').attr('src',npath).animate({opacity: '0'}, 10).animate({opacity: '1'}, "slow");
 }
 
 function prev(){
@@ -124,13 +124,13 @@ function prev(){
    index=1; 
   }
   var npath=path+index+'.jpg';
-  $('#page').attr('src',npath);
+  $('#page').attr('src',npath).animate({opacity: '0'}, 10).animate({opacity: '1'}, "slow");
 }
 </script>
 <!-- about -->
 <div class="w3-content w3-display-container" style="max-height:40px; padding-top: 70px;" >
   <!-- <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="height: 100% width: 100%; max-height: 650px;"> -->
-  <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height: 650px;">
+  <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
   <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">prev</i></a>
   </div>
