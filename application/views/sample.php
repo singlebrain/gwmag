@@ -8,6 +8,7 @@ $index = $this->session->userdata('index');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
+<link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,11 +16,7 @@ $index = $this->session->userdata('index');
 <!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
  -->
  <style>
-/*.mySlides {display:none}
-w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding: ;}
-*/body {font-family: "Verdana":sans-serif;  background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
-h1,h2,h3,h4,h5,h6 {font-family: "Verdana":sans-serif;}
+body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 .navi {
     border: solid black;
     border-width: 0 3px 3px 0;
