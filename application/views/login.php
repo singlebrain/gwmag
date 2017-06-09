@@ -7,11 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
+<script src="<?php echo base_url('js/custom.js')?>"></script>
 <link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
-<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
 <style>
 body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 </style>
@@ -74,23 +73,6 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 
 <!-- insert here -->
 
-<script>
-var d=document;
-// Script to open and close sidebar
-function w3_open() {
-  $("#mySidebar").show();
-  $("#myOverlay").show();
-    // d.getElementById("mySidebar").style.display = "block";
-    // d.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  $("#mySidebar").hide();
-  $("#myOverlay").hide();
-    // d.getElementById("mySidebar").style.display = "none";
-    // d.getElementById("myOverlay").style.display = "none";
-}
-</script>
 <!-- about -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
   <img class="w3-image w3-animate-right" src="<?php echo base_url('images/about.jpg') ?>" style="width:100%">

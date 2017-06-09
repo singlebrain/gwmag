@@ -7,11 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
+<script src="<?php echo base_url('js/custom.js')?>"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url('images/slides/my-slider.css') ?>"/>
 <link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
-<script src="<?php echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
 <style>
 body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
 </style>
@@ -28,10 +27,10 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
      --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
   <div class="w3-bar-block">
-    <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
+    <a href="loadhome" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
     <a href="loadabout" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="loadsayso" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
-    <a href="loadfaq" onclick="w3_close()" class="w3-bar-item w3-text-teal w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
+    <a href="loadfaq" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
     <a href="loadcontact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
     <a href="loadjoinus" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-users fa-fw w3-margin-right"></i>JOIN US</a>
   </div>
@@ -48,10 +47,8 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
 </div>
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:200px">
-
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
@@ -71,28 +68,8 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
   </header>
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >
-
   </div>
 </div> 
-
-<script>
-d=document;
-// Script to open and close sidebar
-function w3_open() {
-  $("#mySidebar").show();
-  $("#myOverlay").show();
-    // d.getElementById("mySidebar").style.display = "block";
-    // d.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  $("#mySidebar").hide();
-  $("#myOverlay").hide();
-    // d.getElementById("mySidebar").style.display = "none";
-    // d.getElementById("myOverlay").style.display = "none";
-}
-
-</script>
   <div class="w3-container w3-row" style="margin-top:60px;">
   <!-- <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
   </div> -->
