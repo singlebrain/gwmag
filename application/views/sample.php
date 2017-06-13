@@ -23,11 +23,14 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+
 }
+
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    
 }
 
 .left {
@@ -128,11 +131,11 @@ function prev(){
 }
 </script>
 <!-- about -->
-<div class="w3-content w3-display-container" style="max-height:40px; padding-top: 70px;" >
+<div class="w3-content w3-display-container" style="max-height:40px; padding-top: 70px; padding-left: 200px; padding-right: 220px" >
   <!-- <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="height: 100% width: 100%; max-height: 650px;"> -->
-  <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="max-height: 650px;">
+  <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" align="middle" vspace="0px 450px" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
-  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">prev</i></a>
+  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">ʌǝɹd</i></a>
   </div>
   <!-- Footer -->
   <!-- <footer class="w3-container w3-padding-32">
