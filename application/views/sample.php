@@ -17,6 +17,10 @@ $index = $this->session->userdata('index');
 <!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
  -->
  <style>
+ .night{
+  background-color: black;
+  color: white;
+ }
  h1{
   display: none; !important
  }
@@ -74,14 +78,16 @@ function prev(){
   $('#page').attr('src',npath).animate({opacity: '0'}, 10).animate({opacity: '1'}, "slow");
 }
 </script>
+<body>
 <!-- about -->
-<div class="w3-content w3-display-container w3-center" style="max-height:40px; padding-top: 20px; width: 100%" >
+<div class="w3-main" class="width:100%">
+<div>
+  <button class='w3-button w3-black w3-center' onclick="$('body').toggleClass('night'); ">Night Mode</button>
+</div>
+<div class="w3-content w3-display-container w3-center" style="max-height:40px;width:100%" >
   <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" align="middle" vspace="0px 450px" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
   <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">ʌǝɹd</i></a>
-  </div>
-      </div>
-    </div>
   </div>
 <!-- End page content -->
 </div>
