@@ -17,7 +17,9 @@ $index = $this->session->userdata('index');
 <!-- <script src="<?php// echo base_url('images/slides/ism-2.2.min.js') ?>"></script>
  -->
  <style>
-body {}
+ h1{
+  display: none; !important
+ }
 .navi {
     border: solid black;
     border-width: 0 3px 3px 0;
@@ -73,50 +75,15 @@ function prev(){
 }
 </script>
 <!-- about -->
-<div class="w3-content w3-display-container" style="max-height:40px; padding-top: 70px; padding-left: 200px; padding-right: 220px" >
-  <!-- <img class="w3-image w3-animate-right w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" style="height: 100% width: 100%; max-height: 650px;"> -->
+<div class="w3-content w3-display-container w3-center" style="max-height:40px; padding-top: 20px; width: 100%" >
   <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" align="middle" vspace="0px 450px" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
   <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">ʌǝɹd</i></a>
   </div>
-  <!-- Footer -->
-  <!-- <footer class="w3-container w3-padding-32">
-  <div class="w3-row-padding">
-    <div class="w3-third w3-center">
-      <img src="<?php// echo base_url('images/lvf-green.png') ?>" height=250dpx width=250dpx/>
-        </div>
-<br>
-    <div class="w3-twothird w3-light-grey" style="opacity: 0.9">
-      <br><p class="w3-text-black  ">dummy text this is used to enter describtion about life values foundation    </p><br><br>
-    </div>    
-  </div>
-  </footer>
- -->
-
-
-<!-- login popup -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content" class="width:50%;">
-      <header class="w3-container w3-blue"> 
-        <span onclick="$('#id01').hide();" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2 style=>Login</h2>
-      </header>
-      <div class="w3-container">
-      <!-- create form here -->
-        <form action="" autocomplete="on" method="get">
-        <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
-        <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
-        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
-         
-        </form>
       </div>
     </div>
   </div>
 <!-- End page content -->
 </div>
-
-
 </body>
 </html>
