@@ -70,14 +70,14 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
 <div class="w3-content w3-display-container" style="max-width:100%; " >
   </div>
 </div> 
-  <div class="w3-container w3-row" style="margin-top:60px;">
+  <div class="w3-container w3-row" >
   <!-- <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
   </div> -->
   <div class="w3-third">
     
   </div>
 
-  <div class="two-third">
+  <div class="two-third" style="margin-top:60px;">
   <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <!-- <td><img src="images/top3.jpg" width="100%" height="inherit"> -->
