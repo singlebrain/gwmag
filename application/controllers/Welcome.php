@@ -21,11 +21,11 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{	
-			$this->session->set_userdata('username',$username);
-			
-			redirect(base_url().'index.php/welcome/userhome');	
+			$uid=$this->home_mod->getuid($this->input->post('userid'));
+			$this->session->set_userdata('uid',$uid);
+			echo "id".$this->session->userdata('uid');
+			redirect(base_url().'index.php/welcome/loadhome');	
 		}
-
 	}
 	public function verifyuser()
 	{
@@ -116,6 +116,11 @@ class Welcome extends CI_Controller {
 			$this->form_validation->set_message('available','user name not available');
 			return false;
 		}
+	}
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url().'index.php/welcome/loadhome');
 	}
 	public function index()
 	{

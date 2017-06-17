@@ -15,7 +15,18 @@ class home_mod extends CI_Model
      $this->db->insert('user_detail', $data);
 
    }
+  public function getuid($uid)
+  {
+    $query = $this->db->query('SELECT id,u_id FROM user_detail');
 
+    foreach ($query->result() as $row)
+    {         
+          if($row->u_id==$uid)
+          {
+            return $row->id;
+          }
+    }
+  }
     public function logincheck($uid, $password)
 	{
 		# code...
