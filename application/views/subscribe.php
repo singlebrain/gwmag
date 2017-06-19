@@ -262,7 +262,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
     </div>
   </div>
     <div>
-    <label class="desc" id="title1" for="Field1">Coupon code</label>
+    <label class="desc" id="title1" for="Field1">Coupon code(if any)</label>
     <div>
       <input name="coupon" type="text" class="field text fn" value="" size="8" tabindex="1">
     </div>

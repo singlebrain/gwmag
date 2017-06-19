@@ -169,7 +169,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
      
       else
       {?>
-      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN</button>
       <?php }?>
       
     </div>
@@ -209,7 +209,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <img src="<?php echo base_url('images/gwlogo.png') ?>">
         </div>
   <div class="w3-container mar">
-  <div class="w3-content w3-round-xxlarge w3-grey w3-text-black" style="padding-left:40; opacity: 0.9"><br>                       
+  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="padding-left:40"><br>                       
                         <?php echo validation_errors();?>
                         
     <form>
@@ -241,7 +241,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <input name="uemail" type="text" class="field text fn" value="" size="8" tabindex="1">
     </div>
   </div>
-  <div class="w3-white">All the forms below are mandatory.</div>
+  <div class="w3-black">All the forms below are mandatory.</div>
   <div>
     <label class="desc"  for="Field106">
       Select the period of subscription
@@ -296,7 +296,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
   
   <div>
     <div>
-      <button class="w3-button  w3-purple w3-left-align" type="submit" >Gift the subscription</button>
+      <button class="w3-button  w3-purple w3-left-align" type="submit" >Subscribe</button>
     </div>
   </div>
 </form>
