@@ -211,7 +211,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
   <div class="w3-container mar">
   <div class="w3-content w3-round-xxlarge w3-grey w3-text-black" style="padding-left:40; opacity: 0.9"><br>                       
                         <?php echo validation_errors();?>
-                        
+                        <?php echo form_open( base_url().'index.php/welcome/checkgift'); ?>
     <form>
   <header>
     <h2>  Gift a subscribtion</h2>
@@ -248,9 +248,9 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
     </label>
     <div>
     <select  name="period" class="field select medium" tabindex="11"> 
-      <option value="First Choice">1 year</option>
-      <option value="Second Choice">2 year</option>
-      <option value="Third Choice">3 year</option>
+      <option value="1">1 year</option>
+      <option value="2">2 year</option>
+      <option value="3">3 year</option>
     </select>
     </div>
   </div>
