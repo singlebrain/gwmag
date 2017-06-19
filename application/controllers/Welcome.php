@@ -197,8 +197,4 @@ public function loadsample()
 		$this->load->view('sample');
 	}
 
-	public function testing()
-	{
-		$this->load->view('testing');
-	}			
 }
