@@ -59,10 +59,27 @@ class Welcome extends CI_Controller {
 	}
 	public function checkgift()
 	{
-		if(!$this->session->has_userdata('uid'))
-		{
-			redirect(base_url().'index.php/welcome/loadloginpage');
-		}
+		
+		$this->form_validation->set_rules('fname','first name','required');
+		$this->form_validation->set_rules('lname','last name','required');
+		$this->form_validation->set_rules('mobile','mobile number','required');
+		$this->form_validation->set_rules('pass1',' New password','required');
+		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
+		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
+		$this->form_validation->set_rules('username','username','required|callback_available');
+			
+		$data = array(
+			'f_name'=>$this->input->post('fname'),
+			'l_name'=>$this->input->post('lname'),
+			'u_id' => $this->input->post('username'),				
+			'pass' => $this->input->post('pass1'),
+			'email' => $this->input->post('email'),
+			'class'=>$this->input->post('class'),
+			'school'=>$this->input->post('school'),
+			'phone' => $this->input->post('mobile'),
+			);
+			
+		
 
 
 		$this->form_validation->set_rules('add1','address line 1','required');
@@ -80,7 +97,7 @@ class Welcome extends CI_Controller {
 		{	
 			$period = $this->input->post('period');
 			$year= (int)date('y')+intval($period);
-			$data = array(
+			$data1 = array(
 				'add1'=>$this->input->post('add1'),
 				'add2'=>$this->input->post('add2'),
 				'city' => $this->input->post('city'),				
@@ -95,10 +112,12 @@ class Welcome extends CI_Controller {
 				'life'=>intval($period)*10
 				);
 			
-			$this->home_mod->createsubscription($data);
+			$this->home_mod->createsubscription($data1);
+			$this->home_mod->createuser($data);
 			//echo date('y');
 			redirect(base_url().'index.php/welcome/loadhome');	
 		}
+	}
 
 	public function subscribe_check()
 	{
