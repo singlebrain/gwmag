@@ -50,6 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="form-group">
                                    <a href="<?php echo base_url('index.php/admin/sentmail') ?>"> <button  name="login" class="btn btn-lg btn-success btn-block" >sent mail</button></a>
                                 </div>
+                                <div class="form-group">
+                                   <a href="<?php echo base_url('index.php/admin/shipment') ?>"> <button  name="login" class="btn btn-lg btn-success btn-block" >Update shipment</button></a>
+                                </div>
                                
                             
 

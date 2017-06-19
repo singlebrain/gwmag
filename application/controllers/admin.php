@@ -30,7 +30,10 @@ class admin extends CI_Controller {
     	require 'PHPMailer/PHPMailerAutoload.php';
 
 			$mail = new PHPMailer;
-
+			$mailers= $this->admin_mod->getmailid();
+			foreach ($mailers as $mailer) {
+				# code...
+			
 			$mail->isSMTP();                                   // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';                    // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                            // Enable SMTP authentication
@@ -41,29 +44,65 @@ class admin extends CI_Controller {
 
 			$mail->setFrom('giantwheelmagazine@gmail.com', 'james');
 			$mail->addReplyTo('giantwheelmagazine@gmail.com', 'james');
-			$mail->addAddress('ashik.alias@gmail.com');   // Add a recipient
+			$mail->addAddress($mailer->email);   // Add a recipient
 			//$mail->addCC('cc@example.com');
 			//$mail->addBCC('bcc@example.com');
 
 			$mail->isHTML(true);  // Set email format to HTML
-
-			//$bodyContent = '<h1>Welcome to giant wheel</h1>';
-			//$bodyContent .= '<p>your login details are <br>username : <b>'.$username.'</b><br>password : <b>'.$password.'</b></p>';
-
 			$mail->Subject = $sub;
 			$mail->Body    = $bodyContent;
 			echo (extension_loaded('openssl')?'SSL loaded':'SSL not loaded');
 			if(!$mail->send()) {
-			    echo 'Message could not be sent.';
+			    echo 'Message could not be sent to.'.$mailer->email;
 			    echo 'Mailer Error: ' . $mail->ErrorInfo;
 			}
 			else {
-			    echo 'Message has been sent';
+			    echo 'Message has been sent to '.$mailer->email;
 			}
+		}
+    }
+    public function shipment()
+    {
+    	
+    	
+    	require 'PHPMailer/PHPMailerAutoload.php';
+
+			$mail = new PHPMailer;
+			$mailers= $this->admin_mod->update_shipment();;
+			foreach ($mailers as $key => $mailer)
+			{
+				$mail->isSMTP();                                   // Set mailer to use SMTP
+				$mail->Host = 'smtp.gmail.com';                    // Specify main and backup SMTP servers
+				$mail->SMTPAuth = true;                            // Enable SMTP authentication
+				$mail->Username = 'giantwheelmagazine@gmail.com';          // SMTP username
+				$mail->Password = '8b140b20e7'; // SMTP password
+				$mail->SMTPSecure = 'tls';                         // Enable TLS encryption, `ssl` also accepted
+				$mail->Port = 587;                                 // TCP port to connect to
+
+				$mail->setFrom('giantwheelmagazine@gmail.com', 'james');
+				$mail->addReplyTo('giantwheelmagazine@gmail.com', 'james');
+				$mail->addAddress($mailer);   // Add a recipient
+				//$mail->addCC('cc@example.com');
+				//$mail->addBCC('bcc@example.com');
+
+				$mail->isHTML(true);  // Set email format to HTML
+				$mail->Subject = "subcription about to end";
+				$mail->Body    = "your subscription to giant wheel magazine is about to end only".$key."copies left.please renew immediately" ;
+				echo (extension_loaded('openssl')?'SSL loaded':'SSL not loaded');
+				if(!$mail->send()) {
+				    echo '      Message could not be sent to.'.$mailer;
+				    echo 'Mailer Error: ' . $mail->ErrorInfo;
+				}
+				else {
+				    echo '      Message has been sent to '.$mailer;
+				}
+			}
+			echo "\nshipment updated....";
+    	$this->load->view('adminhome');
     }
     public function loadhome()
     {
-    	echo $this->session->userdata('aid');
+    
     	$this->load->view('adminhome');
     }
     public function checklogin()
