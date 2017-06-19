@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>FAQ</title>
+<title>LOG IN</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css')?>"> 
@@ -228,13 +228,13 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <input class="w3-button w3-green  w3-left-align" type="submit" value="Sign in"> 
     </div>
   </div>
-  
+  </form>
   <div>
-    <div>
-      <input class="w3-button  w3-purple w3-left-align" type="" value="New user? Sign up">
+    <div class="w3-center">
+      <a href=<?php echo ( base_url().'index.php/welcome/loadsignup'); ?>><button class="w3-button  w3-purple w3-left-align"  >New user? Sign up</button></a>
     </div>
   </div>
-</form>
+
   <div style="float:right">
     <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
   </div>
