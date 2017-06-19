@@ -3,19 +3,118 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>Gift</title>
+<title>GIFT </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="<?php echo base_url('js/custom.js')?>"></script>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo base_url('css/w3.css')?>"> 
 <link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="<?php echo base_url('js/custom.js')?>"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+  font-size: 90%;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; 
+  }
+  form > div > label,
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+  legend {
+    text-align: right;
+  }
+}
+body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
 </style>
 <body>
-
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-animate-left" style=" background-color:#f2f2f2; z-index:3;width:200px;" id="mySidebar"><br>
   <div class="w3-container">
@@ -27,10 +126,10 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
      --><!-- <p class="w3-text-grey">Template by W3.CSS</p>
   </div> -->
   <div class="w3-bar-block">
-    <a href="javascript:void(0)" onclick="window.location='loadhome'" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
+    <a href="javascript:void(0)" onclick="window.location='loadhome'" class="w3-bar-item w3-button w3-padding  w3-hover-blue"><i class="fa fa-th-large fa fa-home w3-margin-right"></i>HOME</a> 
     <a href="javascript:void(0)" onclick="window.location='loadabout'" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
     <a href="javascript:void(0)" onclick="window.location='loadsayso'" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-comment w3-margin-right"></i>SAY SO</a>
-    <a href="javascript:void(0)" onclick="window.location='loadfaq'" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
+    <a href="javascript:void(0)" onclick="window.location='loadfaq'" class="w3-bar-item w3-button w3-padding w3-text-teal w3-hover-blue"><i class="fa fa-user fa fa-question-circle w3-margin-right"></i>FAQ</a>
     <a href="javascript:void(0)" onclick="window.location='loadcontact'" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
     <a href="javascript:void(0)" onclick="window.location='loadjoinus'" class="w3-bar-item w3-button w3-padding w3-hover-blue"><i class="fa fa-users fa-fw w3-margin-right"></i>JOIN US</a>
   </div>
@@ -43,7 +142,6 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </nav>
-
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">
 </div>
@@ -62,7 +160,18 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='logout'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG OUT</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php }?>
+      
     </div>
     <!-- </div> -->
   </header>
@@ -70,146 +179,188 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
 <div class="w3-content w3-display-container" style="max-width:100%; " >
   </div>
 </div> 
-  <div class="w3-container w3-row" >
-  <!-- <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="margin-top:60px; padding-left:40px">
-  </div> -->
-  <div class="w3-third">
-    
+<script>
+// Script to open and close sidebar
+
+// function toggle(q){
+//   hide();
+//   d.getElementById(q).style.color = "black";
+//   d.getElementById(q).style.display = "block";
+// }
+// function hide(){
+//   d.getElementById('a').style.display = 'none';
+//   d.getElementById('b').style.display = 'none';
+//   d.getElementById('c').style.display = 'none';
+//   d.getElementById('d').style.display = 'none';
+//   d.getElementById('e').style.display = 'none';
+//   d.getElementById('f').style.display = 'none';
+//   d.getElementById('g').style.display = 'none';
+//   d.getElementById('h').style.display = 'none';
+//   d.getElementById('i').style.display = 'none';
+//   d.getElementById('j').style.display = 'none';
+//   d.getElementById('k').style.display = 'none';
+  
+// }
+
+
+</script>
+<div class="w3-row-padding">
+    <div class=" w3-center" style="margin-top: 60px;width:100%;">
+      <img src="<?php echo base_url('images/gwlogo.png') ?>">
+        </div>
+  <div class="w3-container mar">
+  <div class="w3-content w3-round-xxlarge w3-grey w3-text-black" style="padding-left:40; opacity: 0.9"><br>                       
+                        <?php echo validation_errors();?>
+                        <?php echo form_open( base_url().'index.php/welcome/checkgift'); ?>
+    <form>
+  <header>
+    <h2>  Gift a subscribtion</h2>
+    <div>Enter the appropriate details in the given form </div>
+  </header>
+  <div>
+    <label class="desc" id="title1" for="Field1">Your name</label>
+    <div>
+      <input name="uname" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Your mobile number</label>
+    <div>
+      <input name="umobile" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Your E-mail address</label>
+    <div>
+      <input name="uemail" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+   <div>
+    <label class="desc" id="title1" for="Field1">Type the message to be conveyed(optional)</label>
+    <div>
+      <input name="uemail" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div class="w3-white">All the forms below are mandatory.</div>
+   <div>
+    <label class="desc" id="title1" for="Field1">First Name</label>
+    <div>
+      <input name="fname" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+   <div>
+    <label class="desc" id="title1" for="Field1">Last Name</label>
+    <div>
+      <input name="lname" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Username</label>
+    <div>
+      <input name="username" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+      <div>
+    <label class="desc" id="title1" for="Field1">Set a new password</label>
+    <div>
+      <input  name="pass1" type="password" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+    <div>
+    <label class="desc" id="title1" for="Field1">Retype password</label>
+    <div>
+      <input  name="pass2" type="password" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">E-mail</label>
+    <div>
+      <input name="email" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+<div>
+    <label class="desc" id="title1" for="Field1">Mobile Number</label>
+    <div>
+      <input name="mobile" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">School</label>
+    <div>
+      <input name="school" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Class</label>
+    <div>
+      <input name="class" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+ 
+  <div>
+    <label class="desc"  for="Field106">
+      Select the period of subscription
+    </label>
+    <div>
+    <select  name="period" class="field select medium" tabindex="11"> 
+      <option value="1">1 year</option>
+      <option value="2">2 year</option>
+      <option value="3">3 year</option>
+    </select>
+    </div>
+  </div>
+  
+  <div>
+    <label class="desc" id="title1" for="Field1">Address (Line1)</label>
+    <div>
+      <input name="add1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+   <div>
+    <label class="desc" id="title1" for="Field1">Address (Line2)</label>
+    <div>
+      <input name="add2" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">City</label>
+    <div>
+      <input name="city" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+     
+  <div>
+    <label class="desc" id="title1" for="Field1">Pin code</label>
+    <div>
+      <input name="pin" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+<div>
+    <label class="desc" id="title1" for="Field1">Country</label>
+    <div>
+      <input name="country" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+    <div>
+    <label class="desc" id="title1" for="Field1">Coupon code(if any)</label>
+    <div>
+      <input name="coupon" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
   </div>
 
-  <div class="two-third" style="margin-top:60px;">
-  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <!-- <td><img src="images/top3.jpg" width="100%" height="inherit"> -->
-      <div id="layer-form">
-        <form  name="ite" id="ite"  method="post" action="form_process.php">    
-          <table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-              <td height="40" colspan="2" align="center" valign="middle" bgcolor="#E24323" class="td_red" ><span class="Rate_title">GIFT A SUBSCRIPTION</span> </td>
-            </tr>
-            <tr>
-              <td height="40" colspan="2" align="center" valign="middle" class="title">Please Enter Your Details </td>
-            </tr>
-            <tr>
-              <td height="30" colspan="2" align="center" valign="middle" class="style1"><table width="600" border="0" cellpadding="0" cellspacing="0" class="tbl2">
-                 <tr>
-                   <td height="10" align="right" valign="middle" class="text"></td>
-                   <td height="10" align="left"></td>
-                 </tr>
-                 <tr>
-              <td height="30" align="right" valign="middle" class="text">Your Name </td>
-              <td width="362" align="left"><input name="g_name" type="text" class="style5" id="g_name" size="40" />
-                <input name="gift" type="hidden" id="gift" value="yes"></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Your Mobile Number </td>
-              <td align="left"><input name="g_phone" type="text" class="style5" id="g_phone" size="40" /></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Your Email Address </td>
-              <td align="left"><input name="g_email" type="text" class="style5" id="g_email" size="40" /></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Message or Greeting you want to convey </td>
-              <td align="left"><textarea name="g_mesg" cols="40" rows="4" class="style5" id="g_mesg"></textarea></td>
-            </tr>
-            <tr>
-              <td height="10" align="right" valign="middle" class="text">&nbsp;</td>
-              <td height="10" align="left">&nbsp;</td>
-            </tr>
-              </table></td>
-            </tr>
-            <tr>
-              <td height="30" colspan="2" align="center" valign="middle" class="style1">&nbsp;</td>
-            </tr>
-            <tr>
-              <td height="20" colspan="2" align="center" valign="middle" class="title">Please fill in the details of the person to whom you want gift this Subscription. </td>
-            </tr>
-     
-            <tr>
-              <td height="30" colspan="2" align="center" valign="top" class="style2"><strong class="titlered">Please note: All the fields are mandatory </strong></td>
-            </tr>
-           
-            <tr>
-              <td height="30" colspan="2" align="center" valign="middle" class="style2">
-        <table width="600" border="0" cellpadding="0" cellspacing="0" class="tbl2">
-                 <tr>
-                   <td height="10" align="right" valign="middle" class="text"></td>
-                   <td height="10" align="left"></td>
-                 </tr>
-                 <tr>
-              <td width="288" height="30" align="right" valign="middle" class="text">No. of Years </td>
-              <td align="left"><select name="years" class="drop" id="years">
-                  <option value="1">1 Year</option>
-                  <option value="2">2 Years</option>
-                  <option value="3" selected="selected">3 Years</option>
-                </select>              </td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Create User ID</td>
-              <td width="362" align="left"><input name="u_id" type="text" class="style5" id="u_id" size="40" /></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Password</td>
-              <td align="left"><input name="pass" type="password" class="style5" id="pass" size="40" /></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Re-type Password </td>
-              <td align="left"><input name="pass2" type="password" class="style5" id="pass2" size="40"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Full Name</td>
-              <td align="left"><input name="name" type="text" class="style5" id="name" size="40"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Address - Door No. / Block </td>
-              <td align="left"><input name="add1" type="text" class="style5" id="add1" size="40" maxlength="50"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Address - Area / Colony </td>
-              <td align="left"><input name="add2" type="text" class="style5" id="add2" size="40" maxlength="50"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">City</td>
-              <td align="left"><input name="city" type="text" class="style5" id="city" size="40"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Pincode</td>
-              <td align="left"><input name="pin" type="text" class="style5" id="pin" size="40" maxlength="6"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Mobile Phone</td>
-              <td align="left"><input name="phone" type="text" class="style5" id="phone" size="40" maxlength="10"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Email Id</td>
-              <td align="left"><input name="email" type="text" class="style5" id="email" size="40"/></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="text">Coupon Code (if you have one) </td>
-              <td align="left"><input name="ccode" type="text" class="style5" id="ccode" size="40"/></td>
-            </tr>
-            <tr>
-              <td height="10" align="right" valign="middle" class="text"></td>
-              <td height="10" align="left"></td>
-            </tr>
-              </table></td>
-            </tr>
-            <tr>
-              <td height="30" align="right" valign="middle" class="style2">&nbsp;</td>
-              <td align="left">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center"><a href="javascript:void(null)"><img src="images/reg.png" border="0" onClick="MM_callJS('validate()')"  ></a>                <!-- <input type="image" name="submit" src="images/reg.png"  alt="Submit" /> --></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center">&nbsp;</td>
-            </tr>
-          </table>
-        </form>
-      </div>
-      <div id="layer-rates">
-      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <div>
+    <div>
+      <button class="w3-button  w3-purple w3-left-align" type="submit" >Gift the subscription</button>
+    </div>
+  </div>
+</form>
+  <div style="float:right">
+    <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
+  </div>
+ </div> 
+ <div id="layer-rates">
+      <table width="100%" border="0" border-left-width ="150"; cellpadding="10" cellspacing="1">
         <tr>
           <td height="70" colspan="4" align="center" bgcolor="#E24323"><span class="Rate_title">Subscribe to get GIANT WHEEL <br />
             right at your doorstep! </span> </td>
@@ -232,39 +383,20 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td height="30" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
+          <td height="30" border="10" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
           </tr>
       </table>
     </div></td>
   </tr>
 </table>
   </div>
- </div> 
+ </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
   </div>
   </footer>
-<!-- login popup -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content" class="width:50%;">
-      <header class="w3-container w3-blue"> 
-        <span onclick="$('#id01').hide();" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2 style=>Login</h2>
-      </header>
-      <div class="w3-container">
-      <!-- create form here -->
-        <form action="" autocomplete="on" method="get">
-        <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
-        <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
-        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
-        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
-         
-        </form>
-      </div>
-    </div>
-  </div>
+
 <!-- End page content -->
 </div>
 </body>
