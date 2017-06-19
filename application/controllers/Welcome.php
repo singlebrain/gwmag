@@ -245,5 +245,9 @@ public function loadsample()
 		$this->session->set_userdata('index',$index);
 		$this->load->view('sample');
 	}
+		public function loadtestpage()
+	{
+		$this->load->view('sign_up');
+	}
 
 }
