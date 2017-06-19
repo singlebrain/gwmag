@@ -219,7 +219,7 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
         </form>
       </div>
       <div id="layer-rates">
-      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <table width="100%" border="0" border-left-width ="150"; cellpadding="10" cellspacing="1">
         <tr>
           <td height="70" colspan="4" align="center" bgcolor="#E24323"><span class="Rate_title">Subscribe to get GIANT WHEEL <br />
             right at your doorstep! </span> </td>
@@ -242,7 +242,7 @@ body {background-image: url("<?php echo base_url('images/01.jpg') ?>");}
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td height="30" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
+          <td height="30" border="10" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
           </tr>
       </table>
     </div></td>

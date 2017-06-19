@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 		{	
 			$uid=$this->home_mod->getuid($this->input->post('userid'));
 			$this->session->set_userdata('uid',$uid);
-			echo "id".$this->session->userdata('uid');
+			
 			redirect(base_url().'index.php/welcome/loadhome');	
 		}
 	}
@@ -49,6 +49,59 @@ class Welcome extends CI_Controller {
 		
 
 	}
+	public function subscribe()
+	{
+		if(!$this->session->has_userdata('uid'))
+		{
+			redirect(base_url().'index.php/welcome/loadloginpage');
+		}
+		$this->load->view('subscribe');
+	}
+
+	public function subscribe_check()
+	{
+		if(!$this->session->has_userdata('uid'))
+		{
+			redirect(base_url().'index.php/welcome/loadloginpage');
+		}
+
+
+		$this->form_validation->set_rules('add1','address line 1','required');
+		$this->form_validation->set_rules('add2','address line 2','required');
+		$this->form_validation->set_rules('city','city','required');
+		$this->form_validation->set_rules('pin','pin code','required|numeric|exact_length[6]');
+		$this->form_validation->set_rules('country','country','required');
+		if($this->form_validation->run()==false)
+		{
+			$this->load->view('subscribe');
+
+
+		}
+		else
+		{	
+			$period = $this->input->post('period');
+			$year= (int)date('y')+intval($period);
+			$data = array(
+				'add1'=>$this->input->post('add1'),
+				'add2'=>$this->input->post('add2'),
+				'city' => $this->input->post('city'),				
+				'pincode' => $this->input->post('pin'),
+				'country' => $this->input->post('country'),
+				'pay_mode'=>'pay_u',
+				'sub_start_date'=>date('m-y'),
+				'sub_exp_date'=>date('m').'-'.$year,
+				'bill_date'=>date('y-m-d'),
+				'u_id'=>$this->session->userdata('uid'),
+				'tosent'=>intval($period)*10,
+				'life'=>intval($period)*10
+				);
+			
+			$this->home_mod->createsubscription($data);
+			//echo date('y');
+			redirect(base_url().'index.php/welcome/loadhome');	
+		}	
+		
+	}
 	public function create_user()
 	{
 		
@@ -68,11 +121,7 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{	
-			$pass1 = $this->input->post('pass1');
-			$name = $this->input->post('name');
-			$email = $this->input->post('email');
-			$rollnum = $this->input->post('rollnum');
-			$dept = $this->input->post('dept');
+			
 			$data = array(
 				'f_name'=>$this->input->post('fname'),
 				'l_name'=>$this->input->post('lname'),
