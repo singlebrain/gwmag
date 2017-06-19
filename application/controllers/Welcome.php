@@ -247,7 +247,7 @@ public function loadsample()
 	}
 		public function loadtestpage()
 	{
-		$this->load->view('sign_up');
+		$this->load->view('_gift');
 	}
 
 }
