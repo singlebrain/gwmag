@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
     {
         parent::__construct();
         $this->load->database();
-        $this->load->model('home_mod');
+        $this->load->model('Home_mod');
         $this->load->library('session');
     }
 	public function checklogin()
