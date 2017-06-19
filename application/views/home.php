@@ -64,7 +64,17 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='logout'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG OUT</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php }?>
     </div>
     <!-- </div> -->
   </header>
@@ -207,6 +217,27 @@ function showDivs(n) {
         <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
+        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
+        <button onclick="$('#id02').show();" class="w3-button w3-blue w3-container ">ign up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content" class="width:50%;">
+      <header class="w3-container w3-blue"> 
+        <span onclick="$('#id01').hide();" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style=>Login</h2>
+      </header>
+      <div class="w3-container">
+      <!-- create form here -->
+        <form action="" autocomplete="on" method="get">
+        <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
+        <input class="w3-input w3-border" type="password" placeholder="password" name="pass1"/>
+        <input class="w3-input w3-border" type="password" placeholder="repassword" name="pass2"/>
         <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
         <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
          

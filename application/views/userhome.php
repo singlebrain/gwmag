@@ -7,10 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
-<script src="<?php echo base_url('js/custom.js')?>"></script>
 <link rel="stylesheet" href="<?php echo base_url('css/custom.css') ?>">
+<script src="<?php echo base_url('js/custom.js')?>"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <style>
 body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 </style>
@@ -50,7 +51,6 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:200px">
-
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
   <!-- opacity -->
@@ -64,20 +64,20 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      <button  onclick="$('#id01').show();" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='logout'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG OUT</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php }?>
     </div>
     <!-- </div> -->
   </header>
-<!-- slider -->
-<div class="w3-content w3-display-container" style="max-width:100%; " >
-</div> 
-
-<!-- insert here -->
-
-<!-- about -->
-<div class="w3-content w3-display-container" style="max-width:100%; " >
-  <img class="w3-image w3-animate-right" src="<?php echo base_url('images/about.jpg') ?>" style="width:100%">
-  </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
@@ -91,28 +91,91 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
   </div>
   </footer>
 
+<!-- Contact Section -->
 
+  <div class="w3-container w3-padding-large" style="background-color: #f2f2f2;opacity: 0.9">
+    <h4 class="w3-light-grey" id="contact"><b> Get In Touch!</b></h4>
+
+
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Feedback</label>
+        <input class="w3-input w3-border" type="text" name="Feedback" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Feedback</button>
+    </form>
+    <h4 id="contact"><b>Contact Us </b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px ;opacity: 2">
+      <div class="w3-third w3-yellow">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-black"></i></p>
+        <p><br>contact@giantwheelmag.com<br><br></p>
+      </div>
+      <div class="w3-third w3-lime">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-black"></i></p>
+        <p>No.19 New Rajanna Layout,<br>Horamavu Agara,<br>Bangalore 560043</p>
+      </div>
+      <div class="w3-third w3-khaki">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-black"></i></p>
+        <p>+91 7899016707<br>+91 9741435333<br>+91 9341220784
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <!-- <div class="w3-black w3-center w3-padding-24"></div> -->
 
 <!-- login popup -->
-
-<!-- <div id="id01" class="w3-modal">
+<div id="id01" class="w3-modal">
     <div class="w3-modal-content" class="width:50%;">
       <header class="w3-container w3-blue"> 
-        v
+        <span onclick="$('#id01').hide();" 
+        class="w3-button w3-display-topright">&times;</span>
         <h2 style=>Login</h2>
       </header>
       <div class="w3-container">
       <!-- create form here -->
-        <!-- <form action="" autocomplete="on" method="get">
+        <form action="" autocomplete="on" method="get">
         <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
         <input class="w3-input w3-border" type="password" placeholder="password" name="pass"/>
+        <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
+        <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
+        <button onclick="$('#id02').show();" class="w3-button w3-blue w3-container ">ign up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content" class="width:50%;">
+      <header class="w3-container w3-blue"> 
+        <span onclick="$('#id01').hide();" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 style=>Login</h2>
+      </header>
+      <div class="w3-container">
+      <!-- create form here -->
+        <form action="" autocomplete="on" method="get">
+        <input class="w3-input w3-border" type="text" placeholder="username" name="u_name"/>
+        <input class="w3-input w3-border" type="password" placeholder="password" name="pass1"/>
+        <input class="w3-input w3-border" type="password" placeholder="repassword" name="pass2"/>
         <input class="w3-button w3-green w3-container " type="submit" value="Sign In" formmethod="post" name="Sign In"/>
         <input class="w3-button w3-blue w3-container " type="button" name="signup" value="Sign Up"  formaction="">
          
         </form>
       </div>
     </div>
-  </div> -->
+  </div>
 <!-- End page content -->
 </div>
 
