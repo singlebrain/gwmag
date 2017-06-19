@@ -229,6 +229,18 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
     </select>
     </div>
   </div>
+     <div>
+    <label class="desc" id="title1" for="Field1">Name</label>
+    <div>
+      <input name="name" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+     <div>
+    <label class="desc" id="title1" for="Field1">Mobile number</label>
+    <div>
+      <input name="mobile" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
   
   <div>
     <label class="desc" id="title1" for="Field1">Address (Line1)</label>
@@ -236,6 +248,7 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <input name="add1" type="text" class="field text fn" value="" size="8" tabindex="1">
     </div>
   </div>
+
    <div>
     <label class="desc" id="title1" for="Field1">Address (Line2)</label>
     <div>
