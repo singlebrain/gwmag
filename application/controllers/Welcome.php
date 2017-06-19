@@ -57,6 +57,67 @@ class Welcome extends CI_Controller {
 		}
 		$this->load->view('subscribe');
 	}
+	public function checkgift()
+	{
+		
+		$this->form_validation->set_rules('fname','first name','required');
+		$this->form_validation->set_rules('lname','last name','required');
+		$this->form_validation->set_rules('mobile','mobile number','required');
+		$this->form_validation->set_rules('pass1',' New password','required');
+		$this->form_validation->set_rules('pass2','Re-type password','required|callback_passmatch');
+		$this->form_validation->set_rules('email','E-mail id','required|valid_email');
+		$this->form_validation->set_rules('username','username','required|callback_available');
+			
+		$data = array(
+			'f_name'=>$this->input->post('fname'),
+			'l_name'=>$this->input->post('lname'),
+			'u_id' => $this->input->post('username'),				
+			'pass' => $this->input->post('pass1'),
+			'email' => $this->input->post('email'),
+			'class'=>$this->input->post('class'),
+			'school'=>$this->input->post('school'),
+			'phone' => $this->input->post('mobile'),
+			);
+			
+		
+
+
+		$this->form_validation->set_rules('add1','address line 1','required');
+		$this->form_validation->set_rules('add2','address line 2','required');
+		$this->form_validation->set_rules('city','city','required');
+		$this->form_validation->set_rules('pin','pin code','required|numeric|exact_length[6]');
+		$this->form_validation->set_rules('country','country','required');
+		if($this->form_validation->run()==false)
+		{
+			$this->load->view('subscribe');
+
+
+		}
+		else
+		{	
+			$period = $this->input->post('period');
+			$year= (int)date('y')+intval($period);
+			$data1 = array(
+				'add1'=>$this->input->post('add1'),
+				'add2'=>$this->input->post('add2'),
+				'city' => $this->input->post('city'),				
+				'pincode' => $this->input->post('pin'),
+				'country' => $this->input->post('country'),
+				'pay_mode'=>'pay_u',
+				'sub_start_date'=>date('m-y'),
+				'sub_exp_date'=>date('m').'-'.$year,
+				'bill_date'=>date('y-m-d'),
+				'u_id'=>$this->session->userdata('uid'),
+				'tosent'=>intval($period)*10,
+				'life'=>intval($period)*10
+				);
+			
+			$this->home_mod->createsubscription($data1);
+			$this->home_mod->createuser($data);
+			//echo date('y');
+			redirect(base_url().'index.php/welcome/loadhome');	
+		}
+	}
 
 	public function subscribe_check()
 	{
