@@ -54,6 +54,8 @@ $(document).ready(function(){
 var path="<?php echo base_url().'images/sample/' ?>";
 var d=document;
 var index=<?php echo $index ?>;
+var setting="ON";
+var on=false;
 // Script to open and close sidebar
 function next(){
   index=index+1;
@@ -73,17 +75,37 @@ function prev(){
   var npath=path+index+'.jpg';
   $('#page').attr('src',npath).animate({opacity: '0'}, 10).animate({opacity: '1'}, "slow");
 }
+
+function change(){
+  $("body").toggleClass("w3-black");
+  on=!on;
+  if(on)
+  {
+    setting="ON";
+  }
+  else{
+    setting="OFF";
+  }
+  $("#nm").text("Night Mode "+setting);
+  // alert($("#nm").text());
+
+}
 </script>
 <!-- about -->
+<div class="w3-main" style="width: 100%">
+<div class="w3-center">
+  <button class="w3-btn w3-black" id="nm" onclick="change()" >Night Mode OFF</button>
+</div>
 <div class="w3-content w3-display-container w3-center" style="max-height:40px; padding-top: 20px; width: 100%" >
   <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" align="middle" vspace="0px 450px" style="max-height: 650px;">
   <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
   <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">ʌǝɹd</i></a>
   </div>
-      </div>
-    </div>
-  </div>
-<!-- End page content -->
 </div>
+<div class="w3-main" style="width: 100%">
+<div class="w3-container w3-bottom w3-center" >
+    <a href="javascript:void(0)" onclick="window.location='loadhome'" class=" w3-button w3-padding w3-hover-blue"><i class="fa fa-th-large fa fa-home"></i>HOME</a> 
+  </div>
+  </div>
 </body>
 </html>
