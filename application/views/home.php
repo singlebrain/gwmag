@@ -82,7 +82,7 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
 <div class="w3-content w3-display-container" id="slideshow" onmouseover="clearTimeout(slider);" onmouseleave="setTimeout(carousel, 2000);" style="max-width:100%; " >
   <!-- <img class="mySlides" src="slides/01.jpg" style="width:100%"> -->
   <img class="mySlides w3-image w3-animate-right" id="slideshow" src="<?php echo base_url('images/slides/1.jpg') ?>" style="width:100%">
-  <img class="mySlides w3-image w3-animate-right" id="slideshow" src="<?php echo base_url('images/slides/2.jpg') ?>" style="width:100%">
+  <img class="mySlides w3-image w3-animate-right" id="slideshow" src="<?php echo base_url('images/slides/2.jpg') ?>" style="width:100%" onclick="window.location='loadraja'">
   <img class="mySlides w3-image w3-animate-right" id="slideshow" src="<?php echo base_url('images/slides/3.jpg') ?>" style="width:100%">
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
     <div class="w3-button w3-left w3-hover-text-khaki" id="left" onclick="plusDivs(-1)">&#10094;</div>

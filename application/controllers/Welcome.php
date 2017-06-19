@@ -286,6 +286,10 @@ public function loadtrial()
 	{
 		$this->load->view('trial');
 	}		
+public function loadraja()
+	{
+		$this->load->view('raja');
+	}			
 public function loadjoinus()
 	{
 		$this->load->view('joinus');
