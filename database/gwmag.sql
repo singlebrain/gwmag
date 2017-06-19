@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2017 at 11:56 AM
+-- Generation Time: Jun 19, 2017 at 10:48 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -51,13 +51,23 @@ CREATE TABLE `subscription` (
   `bill_date` date NOT NULL,
   `pay_mode` varchar(256) NOT NULL,
   `bill_counter` int(11) NOT NULL,
-  `sub_start_date` date NOT NULL,
-  `sub_exp_date` date NOT NULL,
+  `sub_start_date` varchar(255) NOT NULL,
+  `sub_exp_date` varchar(255) NOT NULL,
   `add1` varchar(256) NOT NULL,
   `add2` varchar(256) NOT NULL,
   `city` varchar(256) NOT NULL,
-  `pincode` varchar(256) NOT NULL
+  `country` varchar(255) NOT NULL,
+  `pincode` varchar(256) NOT NULL,
+  `life` int(11) NOT NULL,
+  `tosent` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subscription`
+--
+
+INSERT INTO `subscription` (`id`, `u_id`, `bill_date`, `pay_mode`, `bill_counter`, `sub_start_date`, `sub_exp_date`, `add1`, `add2`, `city`, `country`, `pincode`, `life`, `tosent`) VALUES
+(11, 1, '2017-06-19', 'pay_u', 0, '06-17', '06-18', 'q', 'q', 'q', 'q', '123456', 10, 10);
 
 -- --------------------------------------------------------
 
@@ -120,7 +130,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `subscription`
 --
 ALTER TABLE `subscription`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `user_detail`
 --

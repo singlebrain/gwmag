@@ -30,17 +30,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <?php echo validation_errors();?>
-                    <?php echo form_open( base_url().'index.php/admin/checklogin'); ?>
+                    <?php echo form_open( base_url().'index.php/admin/sentmail_check'); ?>
                     <div class="panel-body">
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="user name" name="username" type="type"  autofocus>
+                                    <input class="form-control" placeholder="user name" name="subject" type="type"  autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                            <label>body</label>
+                                            <textarea class="form-control" name="body" rows="10"></textarea>
                                 </div>
-                                
                                 
                                 <!--
                                 <div class="checkbox">
@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 -->
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input  name="login" class="btn btn-lg btn-success btn-block" value="sign in" type="submit">
+                                <input  name="sent" class="btn btn-lg btn-success btn-block" value="sent" type="submit">
                             </fieldset>
                         </form>
 
