@@ -242,6 +242,61 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
     </div>
   </div>
   <div class="w3-white">All the forms below are mandatory.</div>
+   <div>
+    <label class="desc" id="title1" for="Field1">First Name</label>
+    <div>
+      <input name="fname" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+   <div>
+    <label class="desc" id="title1" for="Field1">Last Name</label>
+    <div>
+      <input name="lname" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Username</label>
+    <div>
+      <input name="username" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+      <div>
+    <label class="desc" id="title1" for="Field1">Set a new password</label>
+    <div>
+      <input  name="pass1" type="password" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+    <div>
+    <label class="desc" id="title1" for="Field1">Retype password</label>
+    <div>
+      <input  name="pass2" type="password" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">E-mail</label>
+    <div>
+      <input name="email" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+<div>
+    <label class="desc" id="title1" for="Field1">Mobile Number</label>
+    <div>
+      <input name="mobile" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">School</label>
+    <div>
+      <input name="school" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">Class</label>
+    <div>
+      <input name="class" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+ 
   <div>
     <label class="desc"  for="Field106">
       Select the period of subscription
