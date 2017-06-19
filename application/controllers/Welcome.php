@@ -282,6 +282,10 @@ public function loadgift()
 	{
 		$this->load->view('gift');
 	}		
+public function loadtrial()
+	{
+		$this->load->view('trial');
+	}		
 public function loadjoinus()
 	{
 		$this->load->view('joinus');
