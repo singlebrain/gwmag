@@ -4,7 +4,7 @@ $index = $this->session->userdata('index');
 ?>
 <!DOCTYPE html>
 <html>
-<title>About</title>
+<title>Sample</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css') ?>">
