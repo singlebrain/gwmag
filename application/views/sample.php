@@ -92,14 +92,14 @@ function change(){
 }
 </script>
 <!-- about -->
-<div class="w3-main" style="width: 100%">
+<div class="w3-main w3-display-container" style="width: 100%">
 <div class="w3-center">
   <button class="w3-btn w3-black" id="nm" onclick="change()" >Night Mode OFF</button>
 </div>
-<div class="w3-content w3-display-container w3-center" style="max-height:40px; padding-top: 20px; width: 100%" >
+<div class="w3-content  w3-center" style="max-height:40px; padding-top: 20px; width: 100%" >
   <img class="w3-image w3-animate-zoom w3-center" id="page" src="<?php echo base_url().'images/sample/'.$index.'.jpg' ?>" align="middle" vspace="0px 450px" style="max-height: 650px;">
-  <a href="javascript:void(null)" onclick="next()"><i class="arrow right navi" style="float: right;">next</i></a>
-  <a href="javascript:void(null)" onclick="prev()"><i class="arrow left navi" style="float: left;">ʌǝɹd</i></a>
+  <a href="javascript:void(null)" onclick="next()"><i class="w3-display-right arrow right navi" style="float: right;">next</i></a>
+  <a href="javascript:void(null)" onclick="prev()"><i class="w3-display-left arrow left navi" style="float: left;">ʌǝɹd</i></a>
   </div>
 </div>
 <div class="w3-main" style="width: 100%">
