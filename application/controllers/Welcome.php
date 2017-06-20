@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 			$uid=$this->Home_mod->getuid($this->input->post('userid'));
 			$this->session->set_userdata('uid',$uid);
 			
-			redirect(base_url().'index.php/welcome/loadhome');	
+			redirect(base_url().'index.php/welcome/userhome');	
 		}
 	}
 	public function verifyuser()
@@ -255,7 +255,8 @@ class Welcome extends CI_Controller {
 	}
 	public function userhome()
 	{
-		//echo $this->session->userdata('username');
+		$data= $this->home_mod->getsubdetail($this->session->userdata('uid');
+		$this->session->set_flashdata('ub_data',$data);
 		$this->load->view('user');
 	}
 public function loadabout()

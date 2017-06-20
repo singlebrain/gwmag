@@ -32,6 +32,13 @@ class home_mod extends CI_Model
           }
     }
   }
+  public function getsubdetail($uid)
+  {
+    $query = $this->db->query('SELECT * FROM subscription where uid=\''.$uid.'\'');
+
+    return ($query->result() 
+    
+  }
     public function logincheck($uid, $password)
 	{
 		# code...
