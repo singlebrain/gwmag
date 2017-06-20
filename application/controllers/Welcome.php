@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{	
-			$uid=$this->home_mod->getuid($this->input->post('userid'));
+			$uid=$this->Home_mod->getuid($this->input->post('userid'));
 			$this->session->set_userdata('uid',$uid);
 			
 			redirect(base_url().'index.php/welcome/loadhome');	
@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 		
 		
 		
-		if($this->home_mod->logincheck($uid,$password)==true)
+		if($this->Home_mod->logincheck($uid,$password)==true)
 		{
 			return true;
 				//$this->load->view('welcome_message');
@@ -112,8 +112,8 @@ class Welcome extends CI_Controller {
 				'life'=>intval($period)*10
 				);
 			
-			$this->home_mod->createsubscription($data1);
-			$this->home_mod->createuser($data);
+			$this->Home_mod->createsubscription($data1);
+			$this->Home_mod->createuser($data);
 			//echo date('y');
 			redirect(base_url().'index.php/welcome/loadhome');	
 		}
@@ -157,7 +157,7 @@ class Welcome extends CI_Controller {
 				'life'=>intval($period)*10
 				);
 			
-			$this->home_mod->createsubscription($data);
+			$this->Home_mod->createsubscription($data);
 			//echo date('y');
 			redirect(base_url().'index.php/welcome/loadhome');	
 		}	
@@ -194,7 +194,7 @@ class Welcome extends CI_Controller {
 				'phone' => $this->input->post('mobile'),
 				);
 			
-			$this->home_mod->createuser($data);
+			$this->Home_mod->createuser($data);
 			
 			$this->load->view('log_in');	
 
@@ -217,7 +217,7 @@ class Welcome extends CI_Controller {
 	}
 	public function available()
 	{
-		if($this->home_mod->available($this->input->post('username')))
+		if($this->Home_mod->available($this->input->post('username')))
 		{
 			return true;
 		}
@@ -285,6 +285,14 @@ public function loadgift()
 public function loadtrial()
 	{
 		$this->load->view('trial');
+	}		
+public function loadraja()
+	{
+		$this->load->view('raja');
+	}	
+	public function loaduser()
+	{
+		$this->load->view('user');
 	}		
 public function loadjoinus()
 	{

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>LOG IN</title>
+<title>Welcome</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css')?>"> 
@@ -112,7 +112,7 @@ textarea:focus {
     text-align: right;
   }
 }
-body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
+
 </style>
 <body>
 <!-- Sidebar/menu -->
@@ -149,76 +149,122 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
 <div class="w3-main" style="margin-left:200px">
   <!-- Header -->
   <header class=" w3-top" id="portfolio" style=" background-color:#f2f2f2; padding-top:1%; padding-bottom:1% ; opacity: 0.9">
-  <!-- opacity -->
-    <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:1200px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
+
     <div class="w3-cell-row">
       <span class=" w3-left w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
-    <!-- <div class="w3-container">
-    <h1><b>My Portfolio</b></h1> -->
-    <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
-      <!-- <button class="w3-button w3-black">ALL</button> -->
+  
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
-      
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='logout'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG OUT</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
+      <?php }?>
     </div>
     <!-- </div> -->
   </header>
+<!-- slider -->
+<div class="w3-content " style="max-width:100%; " >
+  </div>
 </div> 
 <script>
 
 </script>
-<div class="w3-row-padding">
-    <div class=" w3-center" style="margin-top: 60px;width:100%;">
-      <img src="<?php echo base_url('images/gwlogo.png') ?>">
+<!-- footer -->
+<div class="w3-content w3-display-container">
+<div class="w3-row-padding" style="width: 100%;">
+
+    <!-- Left Column -->
+    <div class="w3-main" style="margin-top:100px; width: 100%;">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <!-- <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar"> -->
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Welcome,</h2>
+          </div>
         </div>
+        <div class="w3-container">
+          <p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-teal"></i>Jane Doe</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Subscription Details</b></p>
+          <p>Start Date</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+          <time>1-6-2017</time>
+            <!-- <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div> -->
+          </div>
+          <p>End Date</p>
+
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+          <time>1-6-2018</time>
+            <!-- <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div> -->
+          </div>
+          <p>No of Copies left</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">12</div>
+          </div>
+          <!-- <p>Media</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div> -->
+          <br>
+
+          <!-- <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Spanish</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>German</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br> -->
+          <p class="w3-display-container">
+          <button class="w3-btn w3-teal" onclick="">Renew</button>
+          <button class="w3-button w3-right" onclick=""> Change Address</button>
+          </p>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
   <div class="w3-container mar">
   <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="padding-left:40px;">
   <?php echo validation_errors();?>
                     <?php echo form_open( base_url().'index.php/welcome/checklogin'); ?>
-    <form >
 
-  <header>
-    <h2>LogIn</h2>
-    <div>Enter your username and password</div>
-  </header>
-  
-  <div>
-    <label class="desc" id="title1" for="Field1">username</label>
-    <div>
-      <input name="userid" type="text" class="field text fn" value="" size="8" tabindex="1">
-    </div>
   </div>
-      <div>
-    <label class="desc" id="title1" for="Field1">password</label>
-    <div>
-      <input  name="password" type="password" class="field text fn" value="" size="8" tabindex="1">
-    </div>
+  <div class="w3-border">
+    <table>
+      <tr>
+        
+      </tr>
+    </table>
   </div>
-
-  <div  class="w3-center"><a href="">Forgot password?</a></div>
-  
-  <div>
-    <div>
-      <input class="w3-button w3-green  w3-left-align" type="submit" value="Sign in"> 
-    </div>
-  </div>
-  </form>
-  <div>
-    <div class="w3-center">
-      <a href=<?php echo ( base_url().'index.php/welcome/loadsignup'); ?>><button class="w3-button  w3-purple w3-left-align"  >New user? Sign up</button></a>
-    </div>
-  </div>
-
   <div style="float:right">
     <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
   </div>
  </div> 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32">
-  <div class="w3-row-padding">
-  </div>
-  </footer>
+ </div>
+ </div>
 
 <!-- End page content -->
 </div>
