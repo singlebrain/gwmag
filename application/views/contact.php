@@ -61,8 +61,28 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
     <h1><b>My Portfolio</b></h1> -->
     <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='loadsample'" class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ MAGAZINE</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadsample'" class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>REAd SAMPLE</button>
+      <?php }?>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='subscribe'" class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>SUBSCRIBE</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadtrial'" class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <?php }?>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
       <?php
    
@@ -75,8 +95,7 @@ body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
       {?>
       <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
       <?php }?>
-    </div>
-    <!-- </div> -->
+    </div>    <!-- </div> -->
   </header>
 <!-- slider -->
 <div class="w3-content w3-display-container" style="max-width:100%; " >

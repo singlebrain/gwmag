@@ -256,7 +256,7 @@ class Welcome extends CI_Controller {
 	public function userhome()
 	{
 		//echo $this->session->userdata('username');
-		$this->load->view('home');
+		$this->load->view('user');
 	}
 public function loadabout()
 	{
@@ -274,10 +274,6 @@ public function loadfaq()
 	{
 		$this->load->view('faq');
 	}	
-public function loaduslogin()
-	{
-		$this->load->view('uslogin');
-	}
 public function loadgift()
 	{
 		$this->load->view('gift');
@@ -290,10 +286,7 @@ public function loadraja()
 	{
 		$this->load->view('raja');
 	}	
-	public function loaduser()
-	{
-		$this->load->view('user');
-	}		
+
 public function loadjoinus()
 	{
 		$this->load->view('joinus');

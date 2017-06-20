@@ -152,9 +152,32 @@ textarea:focus {
 
     <div class="w3-cell-row">
       <span class=" w3-left w3-button w3-hide-large w3-large w3-hover-text-grey" onclick="w3_open()" ><i class="fa fa-bars"></i></span>
-  
-      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
-      <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+    <!-- <div class="w3-container">
+    <h1><b>My Portfolio</b></h1> -->
+    <!-- <div class="w3-section w3-bottombar w3-padding-16"> -->
+      <!-- <button class="w3-button w3-black">ALL</button> -->
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='loadsample'" class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>READ MAGAZINE</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadsample'" class=" w3-cell w3-button w3-container "><i class="fa fa-book w3-margin-right"></i>REAd SAMPLE</button>
+      <?php }?>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='subscribe'" class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>SUBSCRIBE</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadtrial'" class=" w3-cell w3-button w3-container "><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
+      <?php }?>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
       <?php
    
@@ -167,8 +190,7 @@ textarea:focus {
       {?>
       <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN/SIGN UP</button>
       <?php }?>
-    </div>
-    <!-- </div> -->
+    </div>    <!-- </div> -->
   </header>
 <!-- slider -->
 <div class="w3-content " style="max-width:100%; " >
