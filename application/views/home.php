@@ -14,6 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <style>
 body {background-image: url("<?php echo base_url('images/bg.jpg') ?>");}
+h1{
+  display: none; !important
+ }
 </style>
 <body>
 
