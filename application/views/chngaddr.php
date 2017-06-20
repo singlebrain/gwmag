@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-<title>LOG IN</title>
+<title>change address</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="<?php echo base_url('css/w3.css')?>"> 
@@ -160,12 +160,48 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadsample'"><i class="fa fa-book w3-margin-right"></i>READ SAMPLE</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadtrial'"><i class="fa fa-clock-o w3-margin-right"></i>TRIAL</button>
       <button class=" w3-cell w3-button w3-container " onclick="window.location='loadgift'"><i class="fa fa-gift w3-margin-right"></i>GIFT</button>
+      <?php
+   
+        if ($this->session->has_userdata('uid')) {?>
+          <button  onclick="window.location='logout'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG OUT</button>
+          <?php
+        }
+     
+      else
+      {?>
+      <button  onclick="window.location='loadloginpage'" class=" w3-cell w3-button w3-container "><i class="fa fa-user-circle w3-margin-right"></i>LOG IN</button>
+      <?php }?>
       
     </div>
     <!-- </div> -->
   </header>
+<!-- slider -->
+<div class="w3-content w3-display-container" style="max-width:100%; " >
+  </div>
 </div> 
 <script>
+// Script to open and close sidebar
+
+// function toggle(q){
+//   hide();
+//   d.getElementById(q).style.color = "black";
+//   d.getElementById(q).style.display = "block";
+// }
+// function hide(){
+//   d.getElementById('a').style.display = 'none';
+//   d.getElementById('b').style.display = 'none';
+//   d.getElementById('c').style.display = 'none';
+//   d.getElementById('d').style.display = 'none';
+//   d.getElementById('e').style.display = 'none';
+//   d.getElementById('f').style.display = 'none';
+//   d.getElementById('g').style.display = 'none';
+//   d.getElementById('h').style.display = 'none';
+//   d.getElementById('i').style.display = 'none';
+//   d.getElementById('j').style.display = 'none';
+//   d.getElementById('k').style.display = 'none';
+  
+// }
+
 
 </script>
 <div class="w3-row-padding">
@@ -173,47 +209,110 @@ body {background-image: url("<?php echo base_url('images/faqbg.jpg') ?>");}
       <img src="<?php echo base_url('images/gwlogo.png') ?>">
         </div>
   <div class="w3-container mar">
-  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="padding-left:40px;">
-  <?php echo validation_errors();?>
-                    <?php echo form_open( base_url().'index.php/welcome/checklogin'); ?>
-    <form >
-
+  <div class="w3-content w3-round-xxlarge w3-yellow w3-text-blue" style="padding-left:40"><br>                       
+                        <?php echo validation_errors();?>
+                        <?php echo form_open('welcome/subscribe_check/'); ?>
+    <form>
   <header>
-    <h2>LogIn</h2>
-    <div>Enter your username and password</div>
+    <h3>  Change address</h3>
+    <div>Enter the new address in the given form </div>
   </header>
-  
-  <div>
-    <label class="desc" id="title1" for="Field1">username</label>
+     <!-- <div>
+    <label class="desc" id="title1" for="Field1">Name</label>
     <div>
-      <input name="userid" type="text" class="field text fn" value="" size="8" tabindex="1">
+      <input name="name" type="text" class="field text fn" value="" size="8" tabindex="1">
     </div>
   </div>
-      <div>
-    <label class="desc" id="title1" for="Field1">password</label>
+     <div>
+    <label class="desc" id="title1" for="Field1">Mobile number</label>
     <div>
-      <input  name="password" type="password" class="field text fn" value="" size="8" tabindex="1">
+      <input name="mobile" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+   -->
+  <div>
+    <label class="desc" id="title1" for="Field1">Address (Line1)</label>
+    <div>
+      <input name="add1" type="text" class="field text fn" value="" size="8" tabindex="1">
     </div>
   </div>
 
-  <div  class="w3-center"><a href="">Forgot password?</a></div>
+   <div>
+    <label class="desc" id="title1" for="Field1">Address (Line2)</label>
+    <div>
+      <input name="add2" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title1" for="Field1">City</label>
+    <div>
+      <input name="city" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+     
+  <div>
+    <label class="desc" id="title1" for="Field1">Pin code</label>
+    <div>
+      <input name="pin" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+<div>
+    <label class="desc" id="title1" for="Field1">Country</label>
+    <div>
+      <input name="country" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+  <div></div>
+    <!-- <div>
+    <label class="desc" id="title1" for="Field1">Coupon code(if any)</label>
+    <div>
+      <input name="coupon" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div> -->
+  <!-- </div> -->
+
   
   <div>
     <div>
-      <input class="w3-button w3-green  w3-left-align" type="submit" value="Sign in"> 
+      <button class="w3-button  w3-purple w3-left-align" type="submit" >Confirm</button>
     </div>
   </div>
-  </form>
-  <div>
-    <div class="w3-center">
-      <a href=<?php echo ( base_url().'index.php/welcome/loadsignup'); ?>><button class="w3-button  w3-purple w3-left-align"  >New user? Sign up</button></a>
-    </div>
-  </div>
-
+</form>
   <div style="float:right">
     <!-- <img src="<?php echo base_url('images/faq.jpg') ?>"> -->
   </div>
  </div> 
+ <div id="layer-rates">
+     <!--  <table width="100%" border="0" border-left-width ="150"; cellpadding="10" cellspacing="1">
+        <tr>
+          <td height="70" colspan="4" align="center" bgcolor="#E24323"><span class="Rate_title">Subscribe to get GIANT WHEEL <br />
+            right at your doorstep! </span> </td>
+        </tr>
+        <tr>
+          <td width="29%" height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">1 year </td>
+          <td width="71%" align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 540 (inclusive of postage)  </td>
+        </tr>
+        <tr>
+          <td height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">2 years </td>
+          <td align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 1020  (inclusive of postage)  </td>
+        </tr>
+        <tr>
+          <td height="30" align="center" bgcolor="#7AAFDB" class="rate_txt">3 years </td>
+          <td align="center" bgcolor="#B2CDE8" class="rate_txt">Rs. 1440  (inclusive of postage)  </td>
+        </tr>
+      </table> -->
+     <!-- <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30" border="10" colspan="2" align="center" bgcolor="#FFFFFF" class="tbl1 style10"  ><span class="style1"><strong><u>Kindly Note:</u></strong></span> <span class="style2">As we are aligned with the  academic year,  there will no issues of the magazine in the months of <b>April</b> and <b>May.</b> </span> </td>
+          </tr>
+      </table>
+    </div></td>
+  </tr>
+</table> -->
+  </div>
+ </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-32">
   <div class="w3-row-padding">
