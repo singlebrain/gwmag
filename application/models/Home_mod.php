@@ -36,7 +36,7 @@ class home_mod extends CI_Model
   {
     $query = $this->db->query('SELECT * FROM subscription where uid=\''.$uid.'\'');
 
-    return ($query->result() 
+    return ($query->result());
     
   }
     public function logincheck($uid, $password)

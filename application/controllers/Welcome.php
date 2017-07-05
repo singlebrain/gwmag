@@ -255,7 +255,7 @@ class Welcome extends CI_Controller {
 	}
 	public function userhome()
 	{
-		$data= $this->home_mod->getsubdetail($this->session->userdata('uid');
+		$data= $this->home_mod->getsubdetail($this->session->userdata('uid'));
 		$this->session->set_flashdata('ub_data',$data);
 		$this->load->view('user');
 	}
